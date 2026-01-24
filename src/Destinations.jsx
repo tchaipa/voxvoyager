@@ -3,8 +3,11 @@ import "./Destinations.css";
 
 function Destinations() {
   return (
-    <div className="destinations-section">
-      <h2>Uncover The Beauty of Your Next Travel Destination</h2>
+    <div className="destinations-section container-fluid">
+      <h2 className="destinations-title">
+        Uncover The Beauty of Your <br />
+        Next Travel Destination
+      </h2>
     </div>
   );
 }

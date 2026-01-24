@@ -1,17 +1,18 @@
-import { Button } from "react-bootstrap";
 import "./Banner.css";
-import Navbar from "./Navbar";
+import { Button } from "react-bootstrap";
 
 function Banner() {
   return (
     <div className="banner-section">
       <div className="banner-content">
-        <h1>Discover The Beautiful World With Us...</h1>
-        <p>
+        <h1 className="banner-title">
+          Discover The Beauty & Wonders <br /> Of Zimbabwe With Us...
+        </h1>
+        <p className="banner-text">
           Possimus delectus suscipit, alias deleniti laboriosam quibusdam ipsam
           felis ipsum sollicitudin pharetra pellentesque sagittis ex.
         </p>
-        <Button variant="primary">Get Started</Button>
+        <Button variant="primary">Explore</Button>
       </div>
     </div>
   );

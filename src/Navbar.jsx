@@ -1,24 +1,20 @@
 import React from "react";
 import "./Navbar.css";
 import { Col, Container, Image, Row } from "react-bootstrap";
-import { Button } from "react-bootstrap";
-// import logo from "./assets/vox_logo.png";
+// import { Button } from "react-bootstrap";
+import logo from "./assets/vox_logo.png";
+import NavDropdown from "react-bootstrap/NavDropdown";
 
 function Navbar() {
   return (
     <div className="navbar container-fluid sticky-top">
-      <Container className="nav-container">
-        <Row>
-          <Col className="button-col"></Col>
-          <Col>
-            <a href="">Home</a>
-            <a href="">About</a>
-            <a href="">Destination</a>
-            <a href="">FAQ</a>
-            <a href="">Contact</a>
-          </Col>
-        </Row>
-      </Container>
+      <Image src={logo} href="" className="nav-logo" />
+
+      <a href="">Home</a>
+      <a href="">About</a>
+      <a href="">Destinations</a>
+      <a href="">FAQ</a>
+      <a href="">Contact</a>
     </div>
   );
 }

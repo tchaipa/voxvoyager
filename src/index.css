@@ -25,10 +25,9 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
   min-width: 320px;
+  width: 100vw;
   min-height: 100vh;
-  /* background: linear-gradient(180deg, #030509, #384c5f 50%, #b4c6d2); */
   flex-direction: column;
   background-color: white;
 
@@ -40,6 +39,7 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
+
 
 button {
   border-radius: 8px;
