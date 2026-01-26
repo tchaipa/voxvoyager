@@ -12,7 +12,9 @@ function Banner() {
           Possimus delectus suscipit, alias deleniti laboriosam quibusdam ipsam
           felis ipsum sollicitudin pharetra pellentesque sagittis ex.
         </p>
-        <Button variant="primary">Explore</Button>
+        <Button className="banner-button" variant="primary">
+          Explore
+        </Button>
       </div>
     </div>
   );

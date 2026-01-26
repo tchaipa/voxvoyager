@@ -1,8 +1,9 @@
 import { Card, Divider } from "@mui/material";
 import "./Packages.css";
 import { Button, Image } from "react-bootstrap";
-import vicfalls from "./assets/vicfalls.jpg";
-
+import vumba from "./assets/vumba.jpg";
+import mana from "./assets/mana.jpg";
+import matopo from "./assets/matopo.jpg";
 function Packages() {
   return (
     <div className="packages-section container-fluid">
@@ -13,7 +14,7 @@ function Packages() {
       </p>
       <div className=" packages-card container-fluid">
         <Card>
-          <Image className="packages-image" src={vicfalls}></Image>
+          <Image className="packages-image" src={vumba}></Image>
           <div
             className="packages-content container-fluid
           "
@@ -26,7 +27,7 @@ function Packages() {
           </div>
         </Card>
         <Card>
-          <Image className="packages-image" src={vicfalls}></Image>
+          <Image className="packages-image" src={mana}></Image>
           <div
             className="packages-content container-fluid
           "
@@ -39,7 +40,7 @@ function Packages() {
           </div>
         </Card>
         <Card>
-          <Image className="packages-image" src={vicfalls}></Image>
+          <Image className="packages-image" src={matopo}></Image>
           <div
             className="packages-content container-fluid
           "
@@ -53,8 +54,8 @@ function Packages() {
         </Card>
       </div>
       <div className="packages-buttons container-fluid">
-        <Button>1</Button>
-        <Button>2</Button>
+        <Button>View all Packages</Button>
+        <Button>Learn More</Button>
       </div>
     </div>
   );

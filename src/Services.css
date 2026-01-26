@@ -15,4 +15,9 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-image: url("./assets/services.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+    /* background-attachment: fixed; */
 }

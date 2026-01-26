@@ -13,8 +13,8 @@ function App() {
       <Banner />
       <FloatingWhatsApp />
       <Destinations />
-      <Services />
       <Packages />
+      <Services />
     </div>
   );
 }

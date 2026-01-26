@@ -3,7 +3,9 @@ import "./Destinations.css";
 import { Button, Col, Container, Image, Row } from "react-bootstrap";
 import { Box, Grid } from "@mui/material";
 import vicfalls from "./assets/vicfalls.jpg";
-import chinhoi from "./assets/chinhoyi.jpg";
+import chinhoi from "./assets/chinhoi.jpg";
+import vumba from "./assets/vumba.jpg";
+import mana from "./assets/mana.jpg";
 
 function Destinations() {
   return (
@@ -29,10 +31,10 @@ function Destinations() {
           </Row>
           <Row>
             <Col>
-              <Image className="destination-image" src={vicfalls}></Image>
+              <Image className="destination-image" src={vumba}></Image>
             </Col>
             <Col>
-              <Image className="destination-image" src={vicfalls}></Image>
+              <Image className="destination-image" src={mana}></Image>
             </Col>
           </Row>
         </Grid>

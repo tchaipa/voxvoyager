@@ -18,7 +18,7 @@
 }
 
 
-Button {
+.banner-button {
     padding: 12px 44px;
     font-size: 18px;
     background-color: transparent;
@@ -31,12 +31,12 @@ Button {
     box-shadow: 0 0 5px rgba(227, 247, 11, 0.5);
 }
 
-Button:hover {
-    /* background: linear-gradient(90deg, #efec2a, #053701); */
-    color: #fff;
-    border-color: black;
-    /* box-shadow: 0 0 5px rgb(210, 235, 25), 0 0 25px rgb(0, 40, 7), 0 0 50px rgb(190, 241, 22), 0 0 100px rgb(1, 47, 13), 0 0 200px rgb(222, 241, 17); */
-    /* border-color: whitesmoke; */
+.banner-button:hover {
+    background: linear-gradient(90deg, #efec2a, #053701);
+    color: white;
+    border-color: rgb(1, 62, 1);
+    box-shadow: 0 0 5px rgb(210, 235, 25), 0 0 25px rgb(0, 40, 7), 0 0 50px rgb(190, 241, 22), 0 0 100px rgb(1, 47, 13), 0 0 200px rgb(222, 241, 17);
+    border-color: whitesmoke;
 
 
 
@@ -76,12 +76,10 @@ p {
 }
 
 .banner-title {
-    /* font-size: 64px; */
-    /* max-width: 600px; */
+
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     padding-left: 50px;
-    /* padding-right: 100px; */
 }
 
 .Row {
@@ -91,15 +89,3 @@ p {
     flex-direction: column;
 
 }
-
-/* button {
-    padding: 12px 44px;
-    font-size: 18px;
-    background-color: transparent;
-    color: #fff;
-    border-color: #fff;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-left: 50px;
-} */
