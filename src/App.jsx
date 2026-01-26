@@ -3,6 +3,7 @@ import Navbar from "./Navbar.jsx";
 import Banner from "./Banner.jsx";
 import Destinations from "./Destinations.jsx";
 import Services from "./Services.jsx";
+import Packages from "./Packages.jsx";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <FloatingWhatsApp />
       <Destinations />
       <Services />
+      <Packages />
     </div>
   );
 }

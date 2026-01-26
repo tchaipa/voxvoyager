@@ -10,11 +10,21 @@ function Navbar() {
     <div className="navbar container-fluid sticky-top">
       <Image src={logo} href="" className="nav-logo" />
 
-      <a href="">Home</a>
-      <a href="">About</a>
-      <a href="">Destinations</a>
-      <a href="">FAQ</a>
-      <a href="">Contact</a>
+      <a className="nav-a" href="">
+        Home
+      </a>
+      <a className="nav-a" href="">
+        About
+      </a>
+      <a className="nav-a" href="">
+        Destinations
+      </a>
+      <a className="nav-a" href="">
+        FAQ
+      </a>
+      <a className="nav-a" href="">
+        Contact
+      </a>
     </div>
   );
 }
