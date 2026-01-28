@@ -10,6 +10,17 @@
     margin-bottom: 10px;
 }
 
+.destinations-card {
+    display: flex;
+    background-position: cover;
+    background-attachment: fixed;
+    /* background-color: #111010 !important; */
+    height: 180px;
+    width: 150px;
+    gap: 20px !important;
+    padding: 20px;
+}
+
 .destination-box {
     display: flex;
     gap: 40px;
@@ -32,6 +43,7 @@
 }
 
 
+
 .destination-container {
     display: flex;
     flex-direction: row;
@@ -43,6 +55,10 @@
 
 .destination-col {
     display: flex;
+}
+
+.destination-row {
+    gap: 20px;
 }
 
 .destination-image {
