@@ -1,7 +1,7 @@
 import React from "react";
 import "./Destinations.css";
 import { Button, Col, Container, Image, Row } from "react-bootstrap";
-import { Box, Grid } from "@mui/material";
+import { Box, Grid, Link } from "@mui/material";
 import vicfalls from "./assets/vicfalls.jpg";
 import chinhoi from "./assets/chinhoi.jpg";
 import vumba from "./assets/vumba.jpg";
@@ -21,22 +21,23 @@ function Destinations() {
           container
           spacing={2}
         >
-          <Row>
-            <Col>
-              <Image className="destination-image" src={vicfalls}></Image>
-            </Col>
-            <Col>
+          <Col className="destination-col">
+          <Image className="destination-image" src={vicfalls}></Image>
+              {/* <h1>Victoria Falls</h1> */}
+            
+            
               <Image className="destination-image" src={chinhoi}></Image>
-            </Col>
-          </Row>
-          <Row>
-            <Col>
+              {/* <h1>Chinhoi Caves</h1> */}
+          
               <Image className="destination-image" src={vumba}></Image>
-            </Col>
-            <Col>
+              {/* <h1>Vumba Mountains</h1> */}
+            
+            
               <Image className="destination-image" src={mana}></Image>
-            </Col>
-          </Row>
+              {/* <h1>Mana Pools</h1> */}
+
+          </Col>
+
         </Grid>
         <Grid
           className="destination-grid container-fluid"
@@ -44,7 +45,12 @@ function Destinations() {
           container
           spacing={2}
         >
+          <Col>
           <Image className="destination-images" src={vicfalls}></Image>
+          <h1>Vic Falls</h1>
+          </Col>
+         
+         
         </Grid>
       </Box>
     </div>

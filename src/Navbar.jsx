@@ -12,10 +12,10 @@ function Navbar() {
           Home
         </a>
         <a className="nav-a" href="">
-          About
+          Destinations
         </a>
         <a className="nav-a" href="">
-          Destinations
+          Packages
         </a>
         <a className="nav-a" href="">
           Contact

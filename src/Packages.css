@@ -6,67 +6,84 @@
     justify-items: center;
     align-items: center;
     color: black;
+    margin-bottom: 40px;
 }
 
 .packages-section p {
     color: black;
     margin-top: 0px;
+    margin-bottom: 40px;
 
 }
-
-.packages-box {
-    /* display: flex;
-    flex-direction: row; */
-    /* gap: 20px; */
-
-}
-
-
-
-
-.packages-content {
-
-    margin-bottom: 10px;
-    padding: 40px;
-    width: 75%;
-    /* margin-top: 20px; */
-}
-
-.packages-content-one {
+.packages-row {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    /* justify-items: center; */
+    justify-items: center;
     align-items: center;
 }
+.packages-col {
+    display: flex;
+    flex-direction: column;
+    padding-left: 80px;
+   
 
-.packages-image {
-    height: 220px;
-    width: 200px;
-    padding-right: 50px;
+}
+.packages-col-pics {
+    display: flex;
+}
+.packages-col h3{
+    color: rgb(1, 29, 1);
+    margin-top: 0px;
+}
+.packages-col p{
+  
+    margin-right: 200px;
+}
+.packages-image-1 {
+    height: 320px;
+    width: 320px;
+    margin-right: 50px;
+
+    position: relative;
+    top: 80px;
+    left: 150px;
+}
+.packages-image-2 {
+    height: 320px;
+    width: 320px;
     margin-right: 50px;
 }
-
-
-
-.packages-h3 {
-    padding-left: 20px;
-    font-size: 30px;
-    margin-top: 10px;
-    margin-bottom: 0px;
-
+.packages-chip-1{
+    color: white !important;
+    background-color: rgb(1, 41, 1) !important; 
+}
+.packages-chip-2 {
+    color: black !important;
+    background-color: yellow !important;
+}
+.packages-chip-3{
+    color: white !important;
+    background-color: rgb(1, 41, 1) !important; 
+}
+.packages-chip-4 {
+    color: black !important;
+    background-color: yellow !important;
+}
+.packages-chips{
+    display: flex;
+    gap: 10px;
+    box-shadow: 10px;
 }
 
-.packages-h5 {
-    padding-left: 20px;
-    margin-top: 10px;
-    margin-bottom: 0px;
-    font-size: 15px;
-    color: blue;
 
-}
 
-.packages-button {
-    background-color: rgb(1, 43, 20);
-    margin-top: 10px;
-}
+
+
+
+
+
+
+
+
+

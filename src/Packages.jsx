@@ -1,10 +1,8 @@
-import { Box, Card, Divider, Grid } from "@mui/material";
+import { Box, Card, Chip, Divider, Grid } from "@mui/material";
 import "./Packages.css";
-import { Button, Image } from "react-bootstrap";
-// import vumba from "./assets/vumba.jpg";
-// import mana from "./assets/mana.jpg";
-// import matopo from "./assets/matopo.jpg";
-import sky from "./assets/sky.jpg";
+import { Button, Col, Container, Image, Row } from "react-bootstrap";
+import pic from "./assets/sky.jpg";
+import picc from "./assets/services.jpg"
 
 function Packages() {
   return (
@@ -14,6 +12,38 @@ function Packages() {
         Our packages are designed to meet the needs of every traveler, from solo
         adventures to family trips.
       </p>
+      <Container className="packages-container">
+        <Row className="packages-row">
+          <Col className="packages-col">
+          <h3>Curated Tour Packages</h3>
+            <p>
+              We offer a curated selection of tour packages, catering various
+              travel styles, themes and durations.
+              These packages are designed to help you discover the destinations
+              in Zimbabwe in an unforgettable way, whether you are looking for a
+              relaxing beach vacation, an adrenaline-pumping adventure, or a
+              cultural immersion experience.
+            </p>
+            <div className="packages-chips container-fluid">
+              
+              <Chip className="packages-chip-1 container-fluid" label="CAMPING"/>
+            <Chip className="packages-chip-2 container-fluid" label="HIKING"/>
+            <Chip className="packages-chip-3 container-fluid" label="FAMILY VACATION"/>
+            <Chip className="packages-chip-4 container-fluid" label="CANOEING"/>
+             
+             
+                        
+            </div>
+                    
+          </Col>
+          <Col className="packages-col-pics">
+          <Image className="packages-image-1" src={picc}></Image>
+          <Image className="packages-image-2" src={pic}></Image>
+
+          </Col>
+        </Row>
+      </Container>
+{/*       
       <Box className="packages-box container-fluid">
         <Grid
           className="packages-grid container-fluid"
@@ -32,8 +62,7 @@ function Packages() {
               relaxing beach vacation, an adrenaline-pumping adventure, or a
               cultural immersion experience.
             </p>
-            <br />
-            <Button className="packages-button">Get Started</Button>
+          
           </div>
         </Grid>
         <Grid
@@ -43,7 +72,7 @@ function Packages() {
           spacing={2}
         >
           <div className="packages-content container-fluid">
-            {/* <span>
+            <span>
               We offer a curated selection of tour packages, catering various
               travel styles, themes and durations. <br />
               <br />
@@ -51,56 +80,11 @@ function Packages() {
               in Zimbabwe in an unforgettable way, whether you are looking for a
               relaxing beach vacation, an adrenaline-pumping adventure, or a
               cultural immersion experience.
-            </span> */}
+            </span>
             <Image className="packages-image" src={sky}></Image>
           </div>
         </Grid>
-      </Box>
-      {/* <div className=" packages-card container-fluid">
-        <Card>
-          <Image className="packages-image" src={vumba}></Image>
-          <div
-            className="packages-content container-fluid
-          "
-          >
-            <h3 className="packages-h3">Victoria Falls</h3>
-            <h5 className="packages-h5">$150/person</h5>
-            <a className="packages-a" href="">
-              Book Now
-            </a>
-          </div>
-        </Card>
-        <Card>
-          <Image className="packages-image" src={mana}></Image>
-          <div
-            className="packages-content container-fluid
-          "
-          >
-            <h3 className="packages-h3">Victoria Falls</h3>
-            <h5 className="packages-h5">$150/person</h5>
-            <a className="packages-a" href="">
-              Book Now
-            </a>
-          </div>
-        </Card>
-        <Card>
-          <Image className="packages-image" src={matopo}></Image>
-          <div
-            className="packages-content container-fluid
-          "
-          >
-            <h3 className="packages-h3">Victoria Falls</h3>
-            <h5 className="packages-h5">$150/person</h5>
-            <a className="packages-a" href="">
-              Book Now
-            </a>
-          </div>
-        </Card>
-      </div>
-      <div className="packages-buttons container-fluid">
-        <Button>View all Packages</Button>
-        <Button>Learn More</Button>
-      </div> */}
+      </Box> */}
     </div>
   );
 }
