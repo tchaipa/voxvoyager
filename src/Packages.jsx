@@ -15,6 +15,13 @@ function Packages() {
         <Grid>
           <Row className="packages-row">
             <Col>
+              <Image
+                src={packages}
+                alt="Package Image"
+                className="packages-image"
+              />
+            </Col>
+            <Col>
               <h3>Curated Tour Packages</h3>
               <p>
                 We offer a curated selection of tour packages, catering various
@@ -37,13 +44,6 @@ function Packages() {
                 <Chip className="packages-chip-2" label="HIKING" />
                 <Chip className="packages-chip-1 " label="CAMPING" />
               </div>
-            </Col>
-            <Col>
-              <Image
-                src={packages}
-                alt="Package Image"
-                className="packages-image"
-              />
             </Col>
           </Row>
         </Grid>

@@ -6,18 +6,21 @@ import Destinations from "./Destinations.jsx";
 // import Services from "./Services.jsx";
 import Packages from "./Packages.jsx";
 import AboutUs from "./AboutUs.jsx";
+import { BrowserRouter } from "react-router-dom";
 // import { FloatingWhatsApp } from "react-floating-whatsapp";
 
 function App() {
   return (
     <div className="App ">
-      <Navbarr />
-      <Banner />
-      {/* <FloatingWhatsApp /> */}
-      <Destinations />
-      <Packages />
-      <AboutUs />
-      {/* <Services /> */}
+      <BrowserRouter>
+        <Navbarr />
+        <Banner />
+        {/* <FloatingWhatsApp /> */}
+        <Destinations />
+        <Packages />
+        <AboutUs />
+        {/* <Services /> */}
+      </BrowserRouter>
     </div>
   );
 }
