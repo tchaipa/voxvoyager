@@ -1,8 +1,4 @@
 .navbar {
-    display: flex;
-    align-items: flex-start;
-    padding: 1rem 2rem;
-    /* background-color: transparent !important; */
     gap: 10px;
     flex-direction: row;
     position: sticky;
@@ -15,6 +11,24 @@
     box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.3);
     border: 1.5px solid rgba(255, 255, 255, 0.18);
     transition: .5s ease;
+    background-color: transparent !important;
+}
+
+.nav-container {
+    display: flex;
+    background-color: #ebfc50;
+    margin-top: 10px;
+    /* display: flex;
+    align-self: center !important; */
+}
+
+.nav-logo {
+    height: 50px;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    margin-bottom: 30px;
+    width: 150px;
+
 }
 
 .navbar a {
@@ -48,13 +62,7 @@
     margin-bottom: 0px;
 }
 
-.nav-logo {
-    height: 50px;
-    aspect-ratio: 3/2;
-    object-fit: cover;
-    padding-bottom: 10px;
-    width: 150px;
-}
+
 
 .nav-links {
     margin-top: 10px;

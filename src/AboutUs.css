@@ -1,0 +1,7 @@
+.about-us-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    justify-items: center;
+}

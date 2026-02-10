@@ -1,9 +1,10 @@
 import "./Banner.css";
 import { Button } from "react-bootstrap";
+import Navbar from "./Navbar";
 
 function Banner() {
   return (
-    <div className="banner-section">
+    <div className="banner-section container-fluid">
       <div className="banner-content">
         <h1 className="banner-title">
           Discover The Beauty & Wonders <br /> Of Zimbabwe With Us...

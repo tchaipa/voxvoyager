@@ -1,3 +1,15 @@
+.services-section {
+    margin-bottom: 20px;
+    margin-top: 0px;
+    height: 100vh;
+    display: flex;
+    color: black !important;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
 .services-title {
     color: #013716;
     font-family: Plus Jakarta Sans, sans-serif;
@@ -6,38 +18,25 @@
     justify-content: center;
     text-align: center;
     justify-items: center;
-}
-
-.services-section {
-    margin-bottom: 20px;
-    margin-top: 0px;
-    height: 100vh;
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    flex-direction: column;
-    /* background-image: url("./assets/sky.jpg"); */
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* opacity: 0.7; */
-    /* background-attachment: fixed; */
-}
-
-.services-title {
     margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
 }
+
 
 .services-row {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     justify-items: center;
-    gap: 20px;
+
+}
+
+.services-col {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
 }
 
 
@@ -47,18 +46,15 @@
     display: flex;
     flex-direction: row;
     height: 250px;
-    width: 220px;
-    border-radius: 10px;
+    width: 400px;
+    border-width: 20px;
+    border-radius: 20px;
     margin-top: 0px;
     justify-content: center;
     justify-items: center;
     align-items: center;
-    background-image: url("./assets/chinhoi.jpg") !important;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+    background-color: transparent;
+    padding: 10px;
+    background-color: rgb(251, 251, 212) !important;
 
-.services-grid {
-    display: flex;
-    flex-direction: column;
 }

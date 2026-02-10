@@ -1,6 +1,27 @@
+@import-normalize;
+/* bring in normalize.css styles */
 
-/* Apply styles starting from medium devices and up to extra large devices */
-@media (min-width: 768px) and (max-width: 1199.98px) {  }
+/* rest of app styles */
+
+
+/* Default height for small devices */
+#intro-example {
+  height: 400px;
+}
+
+/* Height for devices larger than 992px */
+@media (min-width: 992px) {
+  #intro-example {
+    height: 600px;
+  }
+}
+
+@media (min-width:1700px) {
+  main .container {
+    max-width: 100%;
+    padding: 0 150px;
+  }
+}
 
 
 :root {
@@ -30,15 +51,16 @@ a:hover {
 
 body {
   margin: 0;
-  min-width: 320px;
-  width: 100vw;
-  min-height: 100vh;
+
   flex-direction: column;
   background-color: white;
-
-
-
+  overflow-x: hidden;
+  /* position: relative; */
 }
+
+
+
+
 
 h1 {
   font-size: 3.2em;

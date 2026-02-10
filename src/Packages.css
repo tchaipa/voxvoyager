@@ -9,81 +9,99 @@
     margin-bottom: 40px;
 }
 
-.packages-section p {
+.packages-section .row {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin: 15px;
+}
+
+.packages-image {
+    height: 320px;
+    width: 320px;
+    margin-right: 50px;
+    position: relative;
+    top: 80px;
+    left: 150px;
+    object-fit: cover;
+    max-width: auto;
+}
+
+.packages-container {
+    display: flex;
+}
+
+.packages-chips {
+    display: flex;
+    gap: 10px;
+}
+
+.packages-chip-1 {
+    color: white !important;
+    background-color: rgb(1, 41, 1) !important;
+}
+
+.packages-chip-2 {
+    color: black !important;
+    background-color: yellow !important;
+}
+
+.packages-chip-3 {
+    color: white !important;
+    background-color: rgb(1, 41, 1) !important;
+}
+
+.packages-chip-4 {
+    color: black !important;
+    background-color: yellow !important;
+}
+
+.col-2 {
+    background-color: yellow;
+}
+
+.packages-image {
+    display: flex;
+    width: 400px;
+    border-radius: 25px;
+    object-fit: cover;
+
+}
+
+/* .packages-section p {
     color: black;
     margin-top: 0px;
     margin-bottom: 40px;
 
 }
+
+
+
 .packages-row {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
+    gap: 10px;
 }
+
 .packages-col {
     display: flex;
     flex-direction: column;
-    padding-left: 80px;
-   
 
 }
-.packages-col-pics {
+
+.packages-col-2 {
     display: flex;
-}
-.packages-col h3{
-    color: rgb(1, 29, 1);
-    margin-top: 0px;
-}
-.packages-col p{
-  
-    margin-right: 200px;
-}
-.packages-image-1 {
-    height: 320px;
-    width: 320px;
-    margin-right: 50px;
 
     position: relative;
-    top: 80px;
-    left: 150px;
+
+
 }
-.packages-image-2 {
-    height: 320px;
-    width: 320px;
-    margin-right: 50px;
-}
-.packages-chip-1{
-    color: white !important;
-    background-color: rgb(1, 41, 1) !important; 
-}
-.packages-chip-2 {
-    color: black !important;
-    background-color: yellow !important;
-}
-.packages-chip-3{
-    color: white !important;
-    background-color: rgb(1, 41, 1) !important; 
-}
-.packages-chip-4 {
-    color: black !important;
-    background-color: yellow !important;
-}
-.packages-chips{
+
+.packages-grid {
     display: flex;
-    gap: 10px;
-    box-shadow: 10px;
+    margin: 50px;
 }
 
 
 
-
-
-
-
-
-
-
-
-
+ */
