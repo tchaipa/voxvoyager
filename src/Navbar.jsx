@@ -37,7 +37,7 @@ function Navbarr() {
       <Navbar
         collapseOnSelect
         expand="lg"
-        className="nav-container bg-body-tertiary container-fluid"
+        className="nav-container bg-body-tertiary"
       >
         <Navbar.Brand href="#home">
           <img
@@ -45,14 +45,14 @@ function Navbarr() {
             src={logo}
             width="30"
             height="30"
-            className="nav-logo d-inline-block "
+            className="nav-logo d-inline-block align-top"
           />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#features">Home</Nav.Link>
-            <Nav.Link href="#pricing">Services</Nav.Link>
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#packages">Packages</Nav.Link>
             <NavDropdown title="Destinations" id="collapsible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
