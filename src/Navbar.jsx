@@ -10,36 +10,13 @@ import "./Navbar.css";
 
 function Navbarr() {
   return (
-    <div className="navbar ">
-      {/* <Row className="nav-row ">
-        <Col className="nav-col">
-        </Col>
-        <Col className="nav-col">
-          <div className="nav-links container">
-            <a className="nav-a" href="">
-              Home
-            </a>
-
-            <a className="nav-a" href="">
-              Destinations
-            </a>
-
-            <a className="nav-a" href="">
-              Packages
-            </a>
-
-            <a className="nav-a" href="">
-              Contact
-            </a>
-          </div>
-        </Col>
-      </Row> */}
+    <div className="navbar">
       <Navbar
         collapseOnSelect
         expand="lg"
         className="nav-container bg-body-tertiary"
       >
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="/">
           <img
             alt=""
             src={logo}
@@ -51,9 +28,27 @@ function Navbarr() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#packages">Packages</Nav.Link>
-            <NavDropdown title="Destinations" id="collapsible-nav-dropdown">
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="packages">Packages</Nav.Link>
+            <Nav.Link href="gallery">Gallery</Nav.Link>
+            <Nav.Link href="contact-us">Contact Us</Nav.Link>
+
+
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+    </div>
+  );
+}
+
+export default Navbarr;
+
+
+{/* <NavDropdown
+              title="Destinations"
+              id="collapsible-nav-dropdown"
+              className="nav-drop"
+            >
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Another action
@@ -63,12 +58,4 @@ function Navbarr() {
               <NavDropdown.Item href="#action/3.4">
                 Separated link
               </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-    </div>
-  );
-}
-
-export default Navbarr;
+            </NavDropdown> */}

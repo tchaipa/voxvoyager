@@ -1,0 +1,30 @@
+.blog-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 70px;
+
+}
+.blog-card {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 500px;
+    background-color: rgb(244, 242, 240);
+}
+.blog-card p {
+    font-weight:500 ;
+}
+.blog-card a {
+color: rgb(1, 32, 1);
+}
+.blog-card-content {
+    margin: 30px;
+}
+.blog-row {
+    gap: 30px;
+}

@@ -1,7 +1,59 @@
-.about-us-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.aboutus-section {
     height: auto;
+    color: black;
+    /* margin-top: 50px; */
+}
+
+.aboutus-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     justify-items: center;
+    align-items: center;
+    gap: 100px;
+    margin: 15px;
+}
+
+
+.aboutus-image {
+    max-width: 100%;
+    height: 500px;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    border-radius: 75%;
+    margin-left: 30px;
+
+}
+
+.aboutus-grid {
+    display: flex;
+    margin-top: 100px;
+}
+
+
+
+.aboutus-chips {
+    display: flex;
+    gap: 10px;
+}
+
+.aboutus-chip-1 {
+    color: white !important;
+    background-color: rgb(1, 41, 1) !important;
+}
+
+.aboutus-chip-2 {
+    color: black !important;
+    background-color: yellow !important;
+}
+
+.aboutus-chip-3 {
+    color: white !important;
+    background-color: rgb(1, 41, 1) !important;
+}
+
+.aboutus-chip-4 {
+    color: black !important;
+    background-color: yellow !important;
 }

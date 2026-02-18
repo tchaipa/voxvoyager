@@ -7,7 +7,8 @@
     flex-direction: column;
     font-size: 24px;
     color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
+    margin-top: 100px;
 }
 
 p {
@@ -20,10 +21,10 @@ h2 {
     font-size: 48px;
     font-weight: 600;
     color: #013716;
-    margin-top: 100px;
+    /* margin-top: 100px; */
     justify-content: center;
-    text-align: center;
-    margin-top: 80px;
+    /* text-align: center; */
+    /* margin-top: 80px; */
 }
 
 h5 {
@@ -35,6 +36,44 @@ h5 {
     flex-direction: row;
     gap: 15px;
     margin: 15px;
+}
+.destination-cards {
+    display: flex;
+    /* height: 350px;
+    width: 350px; */
+    max-width: 100%;
+    border-radius: 25px;
+    background-image: url(./assets/great-zim.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    position: relative;
+    aspect-ratio: 4 / 3;
+    min-height: 200px;
+    width: 100%;
+    max-width: 100%;
+    /* padding: 1.25em; */
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    font-weight: 300;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    --glow-x: 50%;
+    --glow-y: 50%;
+    --glow-intensity: 0;
+    --glow-radius: 200px;
+}
+.destination-card {
+    display: flex;
+    height: 710px;
+    width: 400px;
+    max-width: 100%;
+    border-radius: 25px;
+    background-image: url(./assets/vumba.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .destination-images {
@@ -67,3 +106,18 @@ h5 {
 h5 {
     margin-top: 5px;
 }
+.destination-link {
+    font-size: 18px;
+    font-weight: bold;
+    align-self: end !important;
+    margin-right: 180px;
+    margin-top: 10px;
+    color: #013716;
+}
+.destination-link:hover {
+    color: yellow;
+}
+
+
+
+   

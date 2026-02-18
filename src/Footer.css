@@ -1,0 +1,16 @@
+.footer-btn {
+    background-color: #011e02;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer-btn:hover {
+    background-color: yellow;
+    color: rgb(2, 22, 2);
+}
+.footer-content {
+    padding: 30px;
+}

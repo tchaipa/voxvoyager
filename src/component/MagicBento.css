@@ -3,10 +3,10 @@
   --sat: 69%;
   --white: hsl(0, 0%, 100%);
   --purple-primary: rgba(132, 0, 255, 1);
-  --purple-glow: rgba(132, 0, 255, 0.2);
-  --purple-border: rgba(132, 0, 255, 0.8);
-  --border-color: #392e4e;
-  --background-dark: #060010;
+  --yellow-glow: yellow;
+  --purple-border: yellow;
+  --border-color: rgb(1, 31, 1);
+  --background-dark: #013303;
   color-scheme: light dark;
 }
 
@@ -29,9 +29,7 @@
   max-width: 100%;
   padding: 1.25em;
   border-radius: 20px;
-  border: 1px solid var(--border-color);
-  /* background: var(--background-dark); */
-  background: var(--purple-primary);
+  /* border: 1px solid var(--border-color); */
   font-weight: 300;
   overflow: hidden;
   transition: all 0.3s ease;
@@ -40,6 +38,26 @@
   --glow-y: 50%;
   --glow-intensity: 0;
   --glow-radius: 200px;
+}
+
+/* Dark overlay when card has a background image so text stays readable */
+.magic-bento-card--has-bg-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  /* background: linear-gradient(
+    to bottom,
+    rgba(6, 0, 16, 0.4) 0%,
+    rgba(6, 0, 16, 0.6) 100%
+  ); */
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.magic-bento-card--has-bg-image .magic-bento-card__header,
+.magic-bento-card--has-bg-image .magic-bento-card__content {
+  z-index: 1;
 }
 
 .magic-bento-card:hover {
@@ -74,9 +92,13 @@
 }
 
 .magic-bento-card__title {
-  font-weight: 400;
-  font-size: 16px;
+  font-weight: bold;
+  font-size: 24px;
+  color: whitesmoke;
   margin: 0 0 0.25em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  
+
 }
 
 .magic-bento-card__description {
@@ -106,7 +128,7 @@
 @media (max-width: 599px) {
   .card-grid {
     grid-template-columns: 1fr;
-    width: 90%;
+    width: 70%;
     margin: 0 auto;
     padding: 0.5em;
   }
@@ -173,10 +195,11 @@
   opacity: 1;
 }
 
+
 .magic-bento-card--border-glow:hover {
   box-shadow:
-    0 4px 20px rgba(46, 24, 78, 0.4),
-    0 0 30px var(--purple-glow);
+    0 4px 20px rgba(240, 240, 14, 0.4),
+    0 0 30px var(--yellow-glow);
 }
 
 .particle-container {
@@ -191,14 +214,14 @@
   left: -2px;
   right: -2px;
   bottom: -2px;
-  background: rgba(132, 0, 255, 0.2);
+  background: yellow;
   border-radius: 50%;
   z-index: -1;
 }
 
 .particle-container:hover {
   box-shadow:
-    0 4px 20px rgba(46, 24, 78, 0.2),
+    0 4px 20px rgba(207, 241, 96, 0.2),
     0 0 30px var(--purple-glow);
 }
 

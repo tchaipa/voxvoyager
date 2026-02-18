@@ -1,7 +1,4 @@
-// import { Box, Card, Grid } from "@mui/material";
-import { Card, Paper } from "@mui/material";
 import "./Services.css";
-// import { Col, Row } from "react-bootstrap";
 
 function Services() {
   return (
