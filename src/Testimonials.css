@@ -62,10 +62,10 @@
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
-.testimonials-section h2 {
+/* .testimonials-section h2 {
     color: #fff !important;
     margin-top: 60px ;
-}
+} */
  .testimonials-button {
     background-color: transparent;
     border-color: yellow;

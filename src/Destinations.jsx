@@ -8,10 +8,7 @@ import { Link } from "react-router-dom";
 function Destinations() {
   return (
     <div className="destinations-section ">
-      <h2 className="destinations-title">
-        Uncover The Beauty of Your <br />
-        Next Travel Destination
-      </h2>
+      <h2>Destinations</h2>
       <MagicBento />
       <a href="destinations" className="destination-link"> 
         Explore More Destinations <FaArrowRight/>

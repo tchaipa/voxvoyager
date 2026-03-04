@@ -16,6 +16,12 @@
     width: 500px;
     background-color: rgb(244, 242, 240);
 }
+.blog-card-image {
+    width: 500px;
+    height: 400px;
+    max-width: 100%;
+    object-fit: cover;
+}
 .blog-card p {
     font-weight:500 ;
 }
@@ -27,4 +33,10 @@ color: rgb(1, 32, 1);
 }
 .blog-row {
     gap: 30px;
+    display: flex;
+    flex-direction: row ;
+}
+.blog-grid {
+    display: flex;
+    flex-direction: row;
 }

@@ -2,7 +2,10 @@ import { Grid } from "@mui/material";
 // import Carousell from "./Carousel";
 import "./Testimonials.css";
 import { Button, Card, Col, Image, Row } from "react-bootstrap";
-import testImage from "./assets/1.jpeg";
+import test1 from "./assets/20.jpeg";
+import test2  from "./assets/21.jpeg";
+import test3  from "./assets/22.jpeg";
+
 
 function Testimonials() {
   return (
@@ -19,7 +22,7 @@ function Testimonials() {
               " Voxvoyager simply are the best. Definitely using their services all the time
               when i visit. I really enjoyed my stay in Zimbabwe"
             </p>
-          <Image className="test-image" src={testImage} />
+          <Image className="test-image" src={test1} />
             <h5>~Jane Doe~</h5>
             
           </Card>
@@ -31,7 +34,7 @@ function Testimonials() {
               " We really had a great time in Vumba all thanks to the wonderfull
               team at VoxVoyager who made our journey a memorable one."
             </p>
-          <Image className="test-image" src={testImage} />
+          <Image className="test-image" src={test2} />
             <h5>~John Doe~</h5>
            
           </Card>
@@ -43,7 +46,7 @@ function Testimonials() {
               " We really had a great time in Vumba all thanks to the wonderfull
               team at VoxVoyager who made our journey a memorable one."
             </p>
-            <Image className="test-image" src={testImage} />
+            <Image className="test-image" src={test3} />
             <h5>~James Doe~</h5>
          
             </Card>

@@ -78,8 +78,9 @@ p {
 .banner-title {
 
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 14px 14px 18px rgba(0, 18, 1, 0.5);
     padding-left: 50px;
+    /* color: #021800; */
 }
 
 .Row {
