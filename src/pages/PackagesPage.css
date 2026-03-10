@@ -1,0 +1,41 @@
+.pack-cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    max-width: 100%;
+    margin: 100px;
+    width: auto;
+    gap: 30px;
+    background-color: #01301a !important;
+
+}
+
+.packages-page-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pack-card {
+    height: 600px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.packages-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pack-image {
+    height: 100px;
+    width: auto;
+    object-fit: cover;
+
+
+}
