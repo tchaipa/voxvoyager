@@ -2,6 +2,7 @@ import { Grid } from "@mui/material";
 // import Carousell from "./Carousel";
 import "./Testimonials.css";
 import { Button, Card, Col, Image, Row } from "react-bootstrap";
+import { FaStar } from "react-icons/fa";
 import test1 from "./assets/20.jpeg";
 import test2  from "./assets/21.jpeg";
 import test3  from "./assets/22.jpeg";
@@ -24,7 +25,13 @@ function Testimonials() {
             </p>
           <Image className="test-image" src={test1} />
             <h5>~Jane Doe~</h5>
-            
+            <div>
+            <FaStar className="fa-star"></FaStar>
+            <FaStar className="fa-star"></FaStar>
+            <FaStar className="fa-star"></FaStar>
+            <FaStar className="fa-star"></FaStar>
+            <FaStar className="fa-star"></FaStar>
+          </div>
           </Card>
            
           </Col>
@@ -36,6 +43,13 @@ function Testimonials() {
             </p>
           <Image className="test-image" src={test2} />
             <h5>~John Doe~</h5>
+            <div>
+            <FaStar className="fa-star"></FaStar>
+            <FaStar className="fa-star"></FaStar>
+            <FaStar className="fa-star"></FaStar>
+            <FaStar className="fa-star"></FaStar>
+            <FaStar className="fa-star"></FaStar>
+          </div>
            
           </Card>
             
@@ -47,8 +61,13 @@ function Testimonials() {
               team at VoxVoyager who made our journey a memorable one."
             </p>
             <Image className="test-image" src={test3} />
-            <h5>~James Doe~</h5>
-         
+            <h5>~James Doe~</h5> <div>
+            <FaStar className="fa-star"></FaStar>
+            <FaStar className="fa-star"></FaStar>
+            <FaStar className="fa-star"></FaStar>
+            <FaStar className="fa-star"></FaStar>
+            <FaStar className="fa-star"></FaStar>
+          </div>
             </Card>
            
           </Col>

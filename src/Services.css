@@ -1,0 +1,40 @@
+.services-section {
+    /* display: flex;
+    flex-direction: column; */
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.services-content {
+    padding: 20px;
+    display: flex;
+
+}
+
+.services-card {
+    height: 300px;
+    width: 300px;
+    display: flex;
+    padding: 30px;
+    border-color: rgb(1, 48, 1);
+    transition: all 0.3s ease;
+
+}
+.services-card:hover {
+    transform: scale(1.05);
+    opacity: 1;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    border-color: rgb(4, 1, 65);
+}
+
+.services-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.services-row {
+    display: flex;
+}

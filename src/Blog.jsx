@@ -23,7 +23,17 @@ function Blog() {
                 </Col>
                 <Col>
                 <Card className="blog-card">
-            <Image className="blog-card-image" src={blogimage2}></Image>
+            <Image className="blog-card-image" src={blogimage2} fluid></Image>
+            <div className="blog-card-content">
+                <p>How to choose the right destination</p>
+                <a href="">Read More <FaArrowRight/></a>
+                </div>
+            </Card>
+
+            </Col>
+            <Col>
+                <Card className="blog-card">
+            <Image className="blog-card-image" src={blogimage2} fluid></Image>
             <div className="blog-card-content">
                 <p>How to choose the right destination</p>
                 <a href="">Read More <FaArrowRight/></a>
