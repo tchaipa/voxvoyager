@@ -8,7 +8,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 function Blog() {
   return (
-    <div className="blog-section container">
+    <div className="blog-section contrainer-fluid">
       <h2>Our Latest Blogs</h2>
       <Grid className="blog-grid">
         <Row className="blog-row">
@@ -17,7 +17,7 @@ function Blog() {
                 <Image className="blog-card-image" src={blogimage1} fluid></Image>
                 <div className="blog-card-content">
                 <p>Top 5 Zimbabwean tourists sites</p>
-                <a href="">Read More <FaArrowRight/></a>
+                <a className="blog-link" href="">Read More <FaArrowRight/></a>
                 </div>
                 </Card>
                 </Col>
@@ -26,7 +26,7 @@ function Blog() {
             <Image className="blog-card-image" src={blogimage2} fluid></Image>
             <div className="blog-card-content">
                 <p>How to choose the right destination</p>
-                <a href="">Read More <FaArrowRight/></a>
+                <a className="blog-link" href="">Read More <FaArrowRight/></a>
                 </div>
             </Card>
 
@@ -36,7 +36,7 @@ function Blog() {
             <Image className="blog-card-image" src={blogimage2} fluid></Image>
             <div className="blog-card-content">
                 <p>How to choose the right destination</p>
-                <a href="">Read More <FaArrowRight/></a>
+                <a className="blog-link" href="">Read More <FaArrowRight/></a>
                 </div>
             </Card>
 
