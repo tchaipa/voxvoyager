@@ -30,6 +30,7 @@
     height: 300px;
     max-width: 100%;
     object-fit: cover;
+    border-radius: 10%;
 }
 
 .blog-card p {
@@ -41,7 +42,8 @@
 }
 
 .blog-card-content {
-    margin-top: 30px;
+    margin-top: 10px;
+    padding: 10px;
 }
 
 .blog-row {
