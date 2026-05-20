@@ -1,41 +1,43 @@
 .aboutus-section {
-    height: auto;
-    color: black;
-    /* margin-top: 50px; */
-}
-
-.aboutus-row {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     justify-items: center;
     align-items: center;
-    gap: 100px;
+    height: auto;
+    color: black;
+    background-color: rgb(255, 255, 255);
+    padding: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+
+.aboutus-row {
+    margin: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.aboutus-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin: 15px;
 }
-/* .aboutus-title {
-    color: #021800;
-    text-shadow: 2px 2px 4px rgba(226, 226, 13, 0.5);
-} */
 
 
 .aboutus-image {
     max-width: 100%;
     height: 500px;
-    display: block;
+    width: 500px;
     object-fit: cover;
     aspect-ratio: 16/9;
-    border-radius: 75%;
-    margin-left: 30px;
-
-}
-
-.aboutus-grid {
-    display: flex;
+    border-radius: 100%;
     margin-top: 100px;
+    margin-left: 100px;
 }
-
-
 
 .aboutus-chips {
     display: flex;
@@ -45,6 +47,7 @@
 .aboutus-chip-1 {
     color: white !important;
     background-color: rgb(1, 41, 1) !important;
+
 }
 
 .aboutus-chip-2 {

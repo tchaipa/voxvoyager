@@ -45,15 +45,17 @@
   content: '';
   position: absolute;
   inset: 0;
-  /* background: linear-gradient(
-    to bottom,
-    rgba(6, 0, 16, 0.4) 0%,
-    rgba(6, 0, 16, 0.6) 100%
-  ); */
   border-radius: inherit;
   pointer-events: none;
   z-index: 0;
 }
+/* .magic-bento-card--has-bg-image:hover::after{
+  background: linear-gradient(
+    to bottom,
+    rgba(41, 178, 14, 0.4) 0%,
+    rgba(6, 0, 16, 0.6) 100%
+  );
+} */
 
 .magic-bento-card--has-bg-image .magic-bento-card__header,
 .magic-bento-card--has-bg-image .magic-bento-card__content {
@@ -167,7 +169,7 @@
 }
 
 /* Border glow effect */
-.magic-bento-card--border-glow::after {
+/* .magic-bento-card--border-glow::after {
   content: '';
   position: absolute;
   inset: 0;
@@ -189,7 +191,7 @@
   opacity: 1;
   transition: opacity 0.3s ease;
   z-index: 1;
-}
+} */
 
 /* .magic-bento-card--border-glow:hover::after {
   opacity: 1;
@@ -198,8 +200,9 @@
 
 .magic-bento-card--border-glow:hover {
   box-shadow:
-    0 4px 20px rgba(240, 240, 14, 0.4),
+    0 4px 20px rgba(0, 39, 7, 0.4),
     0 0 30px var(--yellow-glow) !important;
+    cursor: pointer;
 }
 
 .particle-container {

@@ -12,7 +12,6 @@
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    margin-top: 30px;
 
 
 }
@@ -29,6 +28,7 @@
     transition: background-color 0.3s ease;
     margin-bottom: 20px;
     box-shadow: 0 0 5px rgba(227, 247, 11, 0.5);
+
 }
 
 .banner-button:hover {
@@ -37,9 +37,6 @@
     border-color: rgb(1, 62, 1);
     box-shadow: 0 0 5px rgb(210, 235, 25), 0 0 25px rgb(0, 40, 7), 0 0 50px rgb(190, 241, 22), 0 0 100px rgb(1, 47, 13), 0 0 200px rgb(222, 241, 17);
     border-color: whitesmoke;
-
-
-
 }
 
 h1 {
@@ -51,7 +48,7 @@ h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-p {
+.banner-section p {
     color: white;
     text-wrap: inherit;
 }
@@ -80,7 +77,6 @@ p {
     margin-bottom: 20px;
     text-shadow: 14px 14px 18px rgba(0, 18, 1, 0.5);
     padding-left: 50px;
-    /* color: #021800; */
 }
 
 .Row {
@@ -89,4 +85,14 @@ p {
     align-items: center;
     flex-direction: column;
 
+}
+
+.banner-image {
+    max-width: 100%;
+    height: auto;
+    width: 500px;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    border-radius: 20px;
+    margin-top: 50px;
 }

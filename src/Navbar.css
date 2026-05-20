@@ -1,11 +1,12 @@
 .navbar {
+    display: flex;
     gap: 10px;
     flex-direction: row;
     position: sticky;
     top: 0;
     z-index: 1000;
     width: auto;
-    height: 50px;
+    height: auto;
     max-height: 100px;
     backdrop-filter: blur(100px);
     transition: .5s ease;
@@ -34,7 +35,7 @@
     margin-top: 15px;
     aspect-ratio: 3/2;
     object-fit: cover;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     width: 150px;
 
 }
@@ -75,7 +76,7 @@
 
 
 
-.nav-links {
+/* .nav-links {
     margin-top: 10px;
     margin-bottom: 10px;
-}
+} */

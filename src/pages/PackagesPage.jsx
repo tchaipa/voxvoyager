@@ -2,7 +2,12 @@ import "./PackagesPage.css";
 import Navbarr from "../Navbar";
 import Footer from "../Footer";
 import { Card } from "@mui/material";
-import pack1 from "../assets/vicfalls.jpg";
+import pack1 from "../assets/text.jpeg";
+import pack2 from "../assets/text1.jpeg";
+import pack3 from "../assets/text2.jpeg";
+
+
+
 
 function PackagesPage() {
   return (
@@ -26,8 +31,12 @@ function PackagesPage() {
           <Card className="pack-card">
             <img className="pack-image" src={pack1} fluid />
           </Card>
-          <Card className="pack-card">Bulawayo</Card>
-          <Card className="pack-card">Mutare</Card>
+          <Card className="pack-card">
+          <img className="pack-image" src={pack2} fluid />
+          </Card>
+          <Card className="pack-card">
+          <img className="pack-image" src={pack3} fluid />
+          </Card>
         </Card>
       </div>
 

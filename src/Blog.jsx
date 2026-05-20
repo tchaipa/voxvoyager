@@ -10,6 +10,7 @@ function Blog() {
   return (
     <div className="blog-section contrainer-fluid">
       <h2>Our Latest Blogs</h2>
+      <p>Stay up-to-date with our latest announcements and reminders through our blog posts</p>
       <Grid className="blog-grid">
         <Row className="blog-row">
             <Col>
@@ -17,6 +18,7 @@ function Blog() {
                 <Image className="blog-card-image" src={blogimage1} fluid></Image>
                 <div className="blog-card-content">
                 <p>Top 5 Zimbabwean tourists sites</p>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta sint rem iure, quisquam quae deleniti, at quam odio architecto officia laboriosam ad culpa veritatis mollitia quasi libero facere dolores repellat...</span>
                 <a className="blog-link" href="">Read More <FaArrowRight/></a>
                 </div>
                 </Card>
@@ -26,6 +28,8 @@ function Blog() {
             <Image className="blog-card-image" src={blogimage2} fluid></Image>
             <div className="blog-card-content">
                 <p>How to choose the right destination</p>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta sint rem iure, quisquam quae deleniti, at quam odio architecto officia laboriosam ad culpa veritatis mollitia quasi libero facere dolores repellat...</span>
+
                 <a className="blog-link" href="">Read More <FaArrowRight/></a>
                 </div>
             </Card>
@@ -36,6 +40,7 @@ function Blog() {
             <Image className="blog-card-image" src={blogimage2} fluid></Image>
             <div className="blog-card-content">
                 <p>How to choose the right destination</p>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta sint rem iure, quisquam quae deleniti, at quam odio architecto officia laboriosam ad culpa veritatis mollitia quasi libero facere dolores repellat...</span>
                 <a className="blog-link" href="">Read More <FaArrowRight/></a>
                 </div>
             </Card>

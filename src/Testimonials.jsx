@@ -13,7 +13,7 @@ function Testimonials() {
     <div className="testimonials-section container-fluid">
       <h2>Testimonials</h2>
       <p className="testimonials-p">
-        Here is what our customers had to say about us
+        Here is what our stakeholders had to say about us
       </p>
       <div className="testimonials-container container-fluid">
         <Row className="testimonials-row">
