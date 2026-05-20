@@ -1,28 +1,21 @@
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Navbarr from "./Navbar.jsx";
-import Banner from "./Banner.jsx";
-import Destinations from "./Destinations.jsx";
-import Testimonials from "./Testimonials.jsx";
-// import Services from "./Services.jsx";
-import AboutUs from "./AboutUs.jsx";
-import Footer from "./Footer.jsx";
-import Blog from "./Blog.jsx";
-// import { FloatingWhatsApp } from "react-floating-whatsapp";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbarr from "./Navbar";
+import Home from "./pages/Home";
+import Packages from "./pages/Packages";
+import Gallery from "./pages/Gallery";
+import ContactUs from "./pages/ContactUs";
 
 function App() {
   return (
-    <div className="App ">
+    <Router>
       <Navbarr />
-      <Banner />
-      <AboutUs />
-      {/* <Services /> */}
-      <Destinations />
-      <Testimonials />
-      <Blog />
-      <Footer />
-            {/* <FloatingWhatsApp /> */}
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/packages" element={<Packages />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/contact-us" element={<ContactUs />} />
+      </Routes>
+    </Router>
   );
 }
 
