@@ -9,10 +9,7 @@ function Destinations() {
   return (
     <div className="destinations-section">
       <h2>Destinations</h2>
-      <span>
-        Explore the beuaty of Zimbabwe with different kind of destinations to
-        choose from. Every destination has its own unique story to tell.
-      </span>
+      <span>Check out our latest calendar for the year 2026.</span>
       <MagicBento />
       <a href="destinations" className="destination-link">
         Explore More Destinations <FaArrowRight />

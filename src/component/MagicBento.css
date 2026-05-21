@@ -49,6 +49,7 @@
   pointer-events: none;
   z-index: 0;
 }
+
 /* .magic-bento-card--has-bg-image:hover::after{
   background: linear-gradient(
     to bottom,
@@ -85,6 +86,9 @@
 
 .magic-bento-card__label {
   font-size: 16px;
+  font-weight: bold;
+  background-color: #013303;
+  padding: 5px;
 }
 
 .magic-bento-card__title,
@@ -94,10 +98,10 @@
 }
 
 .magic-bento-card__title {
-  font-weight: bold !important;
-  font-size: 30px !important;
+  /* font-weight: bold !important; */
+  font-size: 20px !important;
   color: whitesmoke !important;
-  /* margin: 0 0 0.25em; */
+  margin: 0 0 0.10em !important;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) !important;
 
 
@@ -107,6 +111,8 @@
   font-size: 12px;
   line-height: 1.2;
   opacity: 0.9;
+  color: red;
+  align-self: end !important;
 }
 
 .magic-bento-card--text-autohide .magic-bento-card__title,
@@ -202,7 +208,7 @@
   box-shadow:
     0 4px 20px rgba(0, 39, 7, 0.4),
     0 0 30px var(--yellow-glow) !important;
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .particle-container {

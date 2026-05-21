@@ -10,40 +10,40 @@ const MOBILE_BREAKPOINT = 768;
 // Add an `image` property (import or URL string) to any card for a custom background
 const cardData = [
   {
-    title: "Victoria Falls",
-    // description: "Track user behavior",
-    // label: "Victoria Falls",
-    image: new URL("../assets/5.jpeg", import.meta.url).href,
+    title: "Cape Maclear",
+    label: "4-7 JUNE",
+    // description: "$490/person ",
+    image: new URL("../assets/maclear.jpeg", import.meta.url).href,
   },
   {
-    title: "Matopo Hills",
-    // description: "Centralized data view",
-    // label: "Chinhoi Caves",
-    image: new URL("../assets/19.jpeg", import.meta.url).href,
+    title: "Kariba Houseboat Tour",
+    // description: "$280/person",
+    label: "19-21 JUNE",
+    image: new URL("../assets/houseboat.jpeg", import.meta.url).href,
   },
   {
-    title: "Heroes Acre",
+    title: "Kariba Tour",
     // description: "Work together seamlessly",
-    // label: "Matopo Hills",
-    image: new URL("../assets/3.jpeg", import.meta.url).href,
+    label: "17-19 JULY",
+    image: new URL("../assets/kariba.jpeg", import.meta.url).href,
   },
   {
-    title: "Great Zimbabwe",
+    title: "Hwange-Vic Falls Tour",
     // description: "Streamline workflows",
-    // label: "Great Zimbabwe",
-    image: new URL("../assets/14.jpeg", import.meta.url).href,
+    label: "7-10 AUGUST",
+    image: new URL("../assets/hwange.jpeg", import.meta.url).href,
   },
   {
-    title: "Vumba",
+    title: "Nyanga Heroes Tour",
     // description: "Connect favorite tools",
-    // label: "Vumba",
-    image: new URL("../assets/4.jpeg", import.meta.url).href,
+    label: "8-10 AUGUST",
+    image: new URL("../assets/nyanga.jpeg", import.meta.url).href,
   },
   {
-    title: "Heroes Acre",
+    title: "Vilanculos Summer Hideaway",
     // description: "Enterprise-grade protection",
-    // label: "Protection",
-    image: new URL("../assets/12.jpeg", import.meta.url).href,
+    label: "27-30 AUGUST",
+    image: new URL("../assets/vila.jpeg", import.meta.url).href,
   },
 ];
 
@@ -685,7 +685,7 @@ const MagicBento = ({
               }}
             >
               <div className="magic-bento-card__header">
-                {/* <div className="magic-bento-card__label">{card.label}</div> */}
+                <div className="magic-bento-card__label">{card.label}</div>
               </div>
               <div className="magic-bento-card__content">
                 <h2 className="magic-bento-card__title">{card.title}</h2>

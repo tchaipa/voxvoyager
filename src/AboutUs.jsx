@@ -42,46 +42,44 @@ function AboutUs() {
     <div className="aboutus-section">
       <div className="aboutus-row row">
         <div className="aboutus-col col">
-        <AnimatedContent
-              distance={300}
-              direction="horizontal"
-              reverse={false}
-              duration={1.2}
-              ease="bounce.out"
-              initialOpacity={0.2}
-              animateOpacity
-              scale={1.1}
-              threshold={0.2}
-              delay={0.1}
-            >
+          <AnimatedContent
+            distance={300}
+            direction="reverse-horizontal"
+            reverse={false}
+            duration={1.2}
+            ease="bounce.in"
+            initialOpacity={0.2}
+            animateOpacity
+            scale={1.1}
+            threshold={0.2}
+            delay={0.1}
+          >
             <Image src={packages} alt="" className="aboutus-image" fluid />
-            </AnimatedContent>
+          </AnimatedContent>
         </div>
         <div className="aboutus-col col">
-        <h2 className="aboutus-title">About Us</h2>
-            <p>
-               We offer a curated selection of tour packages, catering various
-               travel styles, themes and durations. These packages are designed
-               to help you discover the destinations in Zimbabwe in an
-               unforgettable way, whether you are looking for a relaxing beach
-               vacation, an adrenaline-pumping adventure, or a cultural immersion
-               experience.
-             </p>
-             <div className="aboutus-chips">
-               <Chip className="aboutus-chip-1 " label="CAMPING" />
-               <Chip className="aboutus-chip-2" label="HIKING" />
-               <Chip className="aboutus-chip-3" label="FAMILY VACATION" />
-               <Chip className="aboutus-chip-4" label="CANOEING" />
-             </div>
-             <br />
-             <div className="aboutus-chips ">
-               <Chip className="aboutus-chip-4" label="CANOEING" />
-    <Chip className="aboutus-chip-3" label="FAMILY VACATION" />
-               <Chip className="aboutus-chip-2" label="HIKING" />
-              <Chip className="aboutus-chip-1 " label="CAMPING" />
-             </div>
+          <h2 className="aboutus-title">About Us</h2>
+          <p>
+            We offer a curated selection of tour packages, catering various
+            travel styles, themes and durations. These packages are designed to
+            help you discover the destinations in Zimbabwe in an unforgettable
+            way, whether you are looking for a relaxing beach vacation, an
+            adrenaline-pumping adventure, or a cultural immersion experience.
+          </p>
+          <div className="aboutus-chips">
+            <Chip className="aboutus-chip-1 " label="CAMPING" />
+            <Chip className="aboutus-chip-2" label="HIKING" />
+            <Chip className="aboutus-chip-3" label="FAMILY VACATION" />
+            <Chip className="aboutus-chip-4" label="CANOEING" />
+          </div>
+          <br />
+          <div className="aboutus-chips ">
+            <Chip className="aboutus-chip-4" label="CANOEING" />
+            <Chip className="aboutus-chip-3" label="FAMILY VACATION" />
+            <Chip className="aboutus-chip-2" label="HIKING" />
+            <Chip className="aboutus-chip-1 " label="CAMPING" />
+          </div>
         </div>
-
       </div>
     </div>
   );
