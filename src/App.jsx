@@ -8,6 +8,7 @@ import Testimonials from "./Testimonials.jsx";
 import AboutUs from "./AboutUs.jsx";
 import Footer from "./Footer.jsx";
 import Blog from "./Blog.jsx";
+import ExperienceBand from "./ExperienceBand.jsx";
 // import { FloatingWhatsApp } from "react-floating-whatsapp";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
     <div className="App ">
       <Navbarr />
       <Banner />
+      <ExperienceBand />
       <AboutUs />
       {/* <Services /> */}
       <Destinations />

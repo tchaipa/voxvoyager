@@ -42,7 +42,7 @@ function AboutUs() {
     <div className="aboutus-section">
       <div className="aboutus-row row">
         <div className="aboutus-col col">
-          <AnimatedContent
+          {/* <AnimatedContent
             distance={300}
             direction="reverse-horizontal"
             reverse={false}
@@ -55,7 +55,8 @@ function AboutUs() {
             delay={0.1}
           >
             <Image src={packages} alt="" className="aboutus-image" fluid />
-          </AnimatedContent>
+          </AnimatedContent> */}
+          <Image src={packages} alt="" className="aboutus-image" fluid />
         </div>
         <div className="aboutus-col col">
           <h2 className="aboutus-title">About Us</h2>

@@ -1,0 +1,51 @@
+.experience-band {
+    background: #00240e;
+    border-top: 1px solid rgba(201, 168, 76, 0.12);
+    border-bottom: 1px solid rgba(201, 168, 76, 0.12);
+    padding: 64px 80px;
+    display: flex;
+    gap: 0;
+    height: auto;
+}
+
+.exp-item {
+    flex: 1;
+    padding: 0 48px;
+    text-align: center;
+    border-right: 1px solid rgba(201, 168, 76, 0.1);
+}
+
+.exp-item:first-child {
+    padding-left: 0;
+}
+
+.exp-item:last-child {
+    border-right: none;
+    padding-right: 0;
+}
+
+.exp-icon {
+    width: 44px;
+    height: 44px;
+    margin: 0 auto 16px;
+    border: 1px solid rgba(201, 168, 76, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: yellow;
+}
+
+.exp-title {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.exp-desc {
+    font-size: 13px;
+    color: yellow;
+    line-height: 1.65;
+}
