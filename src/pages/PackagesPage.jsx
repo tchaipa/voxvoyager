@@ -8,69 +8,282 @@ import vicfalls from "../assets/maclear.jpeg";
 // import pack3 from "../assets/text2.jpeg";
 
 function PackagesPage() {
+  // ── Filter ────────────────────────────────────
+  function filterTrips(cat, btn) {
+    document
+      .querySelectorAll(".filter-btn")
+      .forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+    document.querySelectorAll(".trip-card, .featured-card").forEach((card) => {
+      const cats = card.dataset.category || "";
+      card.style.display = cat === "all" || cats.includes(cat) ? "" : "none";
+    });
+  }
+
+  // ── Modal data ────────────────────────────────
+  const trips = {
+    vf: {
+      cat: "Ultra Luxury · Adventure",
+      title: "Victoria Falls Exclusive Retreat",
+      desc: "Stand at the edge of the world's greatest waterfall — Mosi-oa-Tunya, the Smoke that Thunders — then retreat to a private villa overlooking the Batoka Gorge. This five-night journey is all about intensity and indulgence in equal measure.",
+      price: "$3,200",
+      meta: [
+        { l: "Duration", v: "5 Days" },
+        { l: "Departs", v: "Jul 12, 2026" },
+        { l: "Group", v: "Max 8 guests" },
+        { l: "Location", v: "Victoria Falls, ZW" },
+        { l: "Level", v: "Moderate" },
+        { l: "Meals", v: "Fully inclusive" },
+      ],
+      itin: [
+        "Arrival & sunset helicopter flight over the Falls",
+        "Full-day guided Falls tour — Devil's Pool at the edge",
+        "Zambezi white-water rafting (Grade 5 rapids)",
+        "Sunset cruise & private gorge dinner",
+        "Morning game drive · departure transfers",
+      ],
+    },
+    gz: {
+      cat: "Cultural Heritage",
+      title: "Great Zimbabwe Heritage Journey",
+      desc: "Walk among stone walls that are 900 years old, built without mortar by the ancestors of the Shona people. This four-day cultural deep-dive combines history, art, and genuine Zimbabwean hospitality.",
+      price: "$2,100",
+      meta: [
+        { l: "Duration", v: "4 Days" },
+        { l: "Departs", v: "Jul 28, 2026" },
+        { l: "Group", v: "Max 10 guests" },
+        { l: "Location", v: "Masvingo, ZW" },
+        { l: "Level", v: "Easy" },
+        { l: "Meals", v: "Fully inclusive" },
+      ],
+      itin: [
+        "Fly to Masvingo · Heritage site first walk with historian guide",
+        "Full-day Great Zimbabwe ruins exploration · Shona craft workshop",
+        "Village homestay & traditional cooking class",
+        "Kyle Dam boat cruise · departure to Harare",
+      ],
+    },
+    hw: {
+      cat: "Safari · Ultra Luxury",
+      title: "Hwange Safari Lodge Experience",
+      desc: "Zimbabwe's largest national park at its finest. Home to more than 40,000 elephants — the largest land mammal population on earth — Hwange delivers wildlife encounters of breathtaking scale.",
+      price: "$5,800",
+      meta: [
+        { l: "Duration", v: "7 Days" },
+        { l: "Departs", v: "Aug 4, 2026" },
+        { l: "Group", v: "Max 8 guests" },
+        { l: "Location", v: "Hwange NP, ZW" },
+        { l: "Level", v: "Easy–Moderate" },
+        { l: "Meals", v: "Fully inclusive" },
+      ],
+      itin: [
+        "Fly to Hwange · afternoon game drive & lodge orientation",
+        "Sunrise drive · waterhole hide photography session",
+        "Elephant encounter walk with rangers",
+        "Night game drive · bush dinner under stars",
+        "Full day Sinamatella area · walking safari",
+        "Ngamo Plains drive · predator tracking",
+        "Morning activity · fly to Harare · departure",
+      ],
+    },
+    mp: {
+      cat: "Adventure · Safari",
+      title: "Mana Pools Canoe Expedition",
+      desc: "UNESCO World Heritage. Paddle the Zambezi River through a floodplain teeming with hippos, Nile crocodiles, and 12,000 elephants. Wild camping on sandbanks adds a raw, unforgettable edge.",
+      price: "$4,400",
+      meta: [
+        { l: "Duration", v: "6 Days" },
+        { l: "Departs", v: "Aug 18, 2026" },
+        { l: "Group", v: "Max 8 guests" },
+        { l: "Location", v: "Mana Pools, ZW" },
+        { l: "Level", v: "Moderate" },
+        { l: "Meals", v: "Fully inclusive" },
+      ],
+      itin: [
+        "Fly to Mana · canoe safety briefing · first river paddle",
+        "Full-day Zambezi paddle · sandbank camp overnight",
+        "Walking safari in floodplain · wildlife photography",
+        "Canoe to Long Pool · hippo observation",
+        "Morning paddle · fly-camp breakdown",
+        "Drive to Harare · celebratory farewell dinner",
+      ],
+    },
+    eh: {
+      cat: "Adventure · Scenic",
+      title: "Eastern Highlands Scenic Journey",
+      desc: "Cool mountain air, rolling tea estates, thundering waterfalls, and some of Zimbabwe's finest trout fishing. The Eastern Highlands is an entirely different side of the country — green, dramatic, and utterly peaceful.",
+      price: "$2,800",
+      meta: [
+        { l: "Duration", v: "5 Days" },
+        { l: "Departs", v: "Sep 2, 2026" },
+        { l: "Group", v: "Max 10 guests" },
+        { l: "Location", v: "Nyanga, ZW" },
+        { l: "Level", v: "Easy–Moderate" },
+        { l: "Meals", v: "Fully inclusive" },
+      ],
+      itin: [
+        "Drive to Nyanga · Troutbeck Highland Lodge check-in",
+        "Mtarazi Falls hike (second-highest in Africa)",
+        "Honde Valley tea estate tour · Aberfoyle overnight",
+        "Chimanimani Mountains day walk · rock art sites",
+        "Bvumba Botanical Gardens · drive to Mutare · departure",
+      ],
+    },
+    gn: {
+      cat: "Wilderness · Ultra Luxury",
+      title: "Gonarezhou Wilderness Expedition",
+      desc: "The Place of Many Elephants — remote, wild, and barely touched by tourism. Ancient baobabs, the terracotta Chilojo Cliffs, and a mobile luxury camp that moves with the wildlife. A once-in-a-lifetime journey.",
+      price: "$6,500",
+      meta: [
+        { l: "Duration", v: "8 Days" },
+        { l: "Departs", v: "Sep 15, 2026" },
+        { l: "Group", v: "Max 6 guests" },
+        { l: "Location", v: "Gonarezhou NP, ZW" },
+        { l: "Level", v: "Moderate" },
+        { l: "Meals", v: "Fully inclusive" },
+      ],
+      itin: [
+        "Fly to Chiredzi · drive into park · mobile camp setup",
+        "Chilojo Cliffs sunrise walk · elephant tracking",
+        "Runde River walk · crocodile & hippo observation",
+        "Full-day game drive south sector · big five search",
+        "Walking safari with San trackers · bushcraft skills",
+        "Remote fly-camp under baobab canopy",
+        "Dawn drive · Limpopo confluence exploration",
+        "Morning activities · drive to Chiredzi · departure",
+      ],
+    },
+    bw: {
+      cat: "Cultural · Heritage",
+      title: "Bulawayo & Matobo Retreat",
+      desc: "Zimbabwe's City of Kings offers colonial grandeur, Ndebele cultural depth, and a gateway to the Matobo Hills — ancient granite boulders, sacred landscapes, San rock paintings, and the world's densest population of black rhino.",
+      price: "$1,950",
+      meta: [
+        { l: "Duration", v: "4 Days" },
+        { l: "Departs", v: "Sep 28, 2026" },
+        { l: "Group", v: "Max 10 guests" },
+        { l: "Location", v: "Bulawayo, ZW" },
+        { l: "Level", v: "Easy" },
+        { l: "Meals", v: "Fully inclusive" },
+      ],
+      itin: [
+        "Fly to Bulawayo · city heritage walk · National Museum",
+        "Matobo Hills sunrise drive · black rhino tracking on foot",
+        "San Bushman rock painting sites · Ndebele village immersion",
+        "Cecil Rhodes memorial · Chipangali Wildlife Trust · departure",
+      ],
+    },
+  };
+
+  // function openModal(key) {
+  //   const t = trips[key];
+  //   if (!t) return;
+  //   document.getElementById("modal-cat").textContent = t.cat;
+  //   document.getElementById("modal-title").innerHTML = t.title.replace(
+  //     " &amp; ",
+  //     " & ",
+  //   );
+  //   document.getElementById("modal-desc").textContent = t.desc;
+  //   document.getElementById("modal-price").textContent = t.price;
+  //   document.getElementById("modal-grid").innerHTML = t.meta
+  //     .map(
+  //       (m) =>
+  //         `<div class="modal-meta"><div class="label">${m.l}</div><div class="val">${m.v}</div></div>`,
+  //     )
+  //     .join("");
+  //   document.getElementById("modal-itin").innerHTML = `
+  //     <h4>Journey Overview</h4>
+  //     ${t.itin.map((d, i) => `<div class="itin-day"><div class="itin-num">${i + 1}</div><div class="itin-text"><strong>Day ${i + 1}:</strong> ${d}</div></div>`).join("")}
+  //   `;
+  //   // Set modal banner colour based on trip
+  //   const colours = {
+  //     vf: "#2A5060",
+  //     gz: "#3D2008",
+  //     hw: "#1A2A10",
+  //     mp: "#1A3838",
+  //     eh: "#0A1828",
+  //     gn: "#4A1008",
+  //     bw: "#0A1820",
+  //   };
+  //   document.getElementById("modal-img").style.background =
+  //     colours[key] || "#1A1612";
+  //   document.getElementById("modal-overlay").classList.add("open");
+  //   document.body.style.overflow = "hidden";
+  // }
+
+  function closeModal(e, force) {
+    if (!force && e && e.target !== document.getElementById("modal-overlay"))
+      return;
+    document.getElementById("modal-overlay").classList.remove("open");
+    // document.body.style.overflow = "";
+  }
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeModal(null, true);
+  });
   return (
     <div className="packages-page container-fluid">
       <Navbarr />
-      <div class="container my-5">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb p-3 bg-body-tertiary rounded-3">
-            <li class="breadcrumb-item">
-              <a href="#">Home</a>
-            </li>
-            <li class="breadcrumb-item">
-              <a href="#">Packages</a>
-            </li>
-          </ol>
-        </nav>
-      </div>
       <div className="packages-page-section container-fluid">
-        <section id="trips" class="filter-section">
-          <div class="section-header reveal">
+        <section id="trips" className="filter-section">
+          <div className="section-header reveal">
             <div>
-              <div class="section-eyebrow">
-                <span class="eyebrow-line"></span> Upcoming Departures
+              <div className="section-eyebrow">
+                <span className="eyebrow-line"></span> Upcoming Departures
               </div>
-              <h2 class="section-title">
+              <h2 className="section-title">
                 Curated <em>journeys</em>
                 <br />
                 await you
               </h2>
-              {/* <div className="price-policy">
+              {/* <div classNameName="price-policy">
                 All prices are per person. Group discounts available for parties
                 of 4 or more.
               </div> */}
             </div>
           </div>
 
-          <div class="filters reveal reveal-delay-1">
+          <div className="filters reveal reveal-delay-1">
             <button
-              class="filter-btn active"
+              className="filter-btn active"
               onclick="filterTrips('all', this)"
             >
               All Journeys
             </button>
-            <button class="filter-btn" onclick="filterTrips('safari', this)">
+            <button
+              className="filter-btn"
+              onClick="filterTrips('safari', this)"
+            >
               Safari
             </button>
-            <button class="filter-btn" onclick="filterTrips('cultural', this)">
+            <button
+              className="filter-btn"
+              onclick="filterTrips('cultural', this)"
+            >
               Cultural
             </button>
-            <button class="filter-btn" onclick="filterTrips('adventure', this)">
+            <button
+              className="filter-btn"
+              onclick="filterTrips('adventure', this)"
+            >
               Adventure
             </button>
-            <button class="filter-btn" onclick="filterTrips('luxury', this)">
+            <button
+              className="filter-btn"
+              onclick="filterTrips('luxury', this)"
+            >
               Ultra Luxury
             </button>
           </div>
         </section>
-        <section class="trips-section">
+        <section className="trips-section">
           {/* <!-- FEATURED CARD: Victoria Falls --> */}
           <div
-            class="featured-card reveal"
+            className="featured-card reveal"
             data-category="luxury adventure"
             onclick="openModal('vf')"
           >
-            <div class="trip-img">
+            <div className="trip-img">
               <img
                 className="pack-img"
                 viewBox="0 0 720 480"
@@ -78,10 +291,10 @@ function PackagesPage() {
                 aria-label="Victoria Falls scene"
               ></img>
             </div>
-            <div class="featured-content">
+            <div className="featured-content">
               <div>
-                <div class="trip-badge">
-                  <span class="trip-badge-dot"></span>
+                <div className="trip-badge">
+                  <span className="trip-badge-dot"></span>
                   Ultra Luxury · Adventure
                   <span
                   //     style="
@@ -98,52 +311,52 @@ function PackagesPage() {
                     Featured
                   </span>
                 </div>
-                <h3 class="trip-name">
+                <h3 className="trip-name">
                   Victoria Falls
                   <br />
                   <em>Exclusive Retreat</em>
                 </h3>
-                <p class="trip-desc">
+                <p className="trip-desc">
                   Stand at the edge of the world's greatest waterfall — then
                   retreat to a private villa overlooking the gorge. Sunset
                   helicopter flights, white-water rafting on the Zambezi, and a
                   private dinner under the stars.
                 </p>
-                <div class="trip-meta">
-                  <div class="meta-item">
-                    <div class="meta-label">Duration</div>
-                    <div class="meta-value">4 Days</div>
+                <div className="trip-meta">
+                  <div className="meta-item">
+                    <div className="meta-label">Duration</div>
+                    <div className="meta-value">4 Days</div>
                   </div>
-                  <div class="meta-item">
-                    <div class="meta-label">Next Departure</div>
-                    <div class="meta-value">Jun 4, 2026</div>
+                  <div className="meta-item">
+                    <div className="meta-label">Next Departure</div>
+                    <div className="meta-value">Jun 4, 2026</div>
                   </div>
-                  <div class="meta-item">
-                    <div class="meta-label">Group size</div>
-                    <div class="meta-value">Max 8 guests</div>
+                  <div className="meta-item">
+                    <div className="meta-label">Group size</div>
+                    <div className="meta-value">Max 8 guests</div>
                   </div>
                 </div>
               </div>
-              <div class="trip-footer">
-                <div class="price-block">
-                  <div class="from">From</div>
-                  <div class="amount">$490</div>
-                  <div class="per">per person · all inclusive</div>
+              <div className="trip-footer">
+                <div className="price-block">
+                  <div className="from">From</div>
+                  <div className="amount">$490</div>
+                  <div className="per">per person · all inclusive</div>
                 </div>
-                <button class="btn-book">View Details →</button>
+                <button className="btn-book">View Details →</button>
               </div>
             </div>
           </div>
 
           {/* <!-- 5-card grid --> */}
-          <div class="cards-grid" id="cards-grid">
+          <div className="cards-grid" id="cards-grid">
             {/* <!-- Card 2: Great Zimbabwe --> */}
             <div
-              class="trip-card reveal"
+              className="trip-card reveal"
               data-category="cultural"
               onclick="openModal('gz')"
             >
-              <div class="card-img">
+              <div className="card-img">
                 <svg
                   viewBox="0 0 380 220"
                   xmlns="http://www.w3.org/2000/svg"
@@ -269,51 +482,51 @@ function PackagesPage() {
                     opacity="0.15"
                   />
                 </svg>
-                <div class="card-tag">Cultural Heritage</div>
+                <div className="card-tag">Cultural Heritage</div>
               </div>
-              <div class="card-body">
-                <div class="card-name">
+              <div className="card-body">
+                <div className="card-name">
                   Kariba Tour
                   <br />
                   Houseboat Experience
                 </div>
-                <div class="card-desc">
+                <div className="card-desc">
                   Walk among 900-year-old stone ruins that gave the nation its
                   name. Expert historian guides, Masvingo village homestays, and
                   traditional Shona craft workshops.
                 </div>
-                <div class="card-details">
-                  <div class="card-detail">
-                    <div class="cd-label">Days</div>
-                    <div class="cd-val">3 days</div>
+                <div className="card-details">
+                  <div className="card-detail">
+                    <div className="cd-label">Days</div>
+                    <div className="cd-val">3 days</div>
                   </div>
-                  <div class="card-detail">
-                    <div class="cd-label">Departs</div>
-                    <div class="cd-val">Jun 19</div>
+                  <div className="card-detail">
+                    <div className="cd-label">Departs</div>
+                    <div className="cd-val">Jun 19</div>
                   </div>
-                  <div class="card-detail">
-                    <div class="cd-label">Guests</div>
-                    <div class="cd-val">Max 10</div>
+                  <div className="card-detail">
+                    <div className="cd-label">Guests</div>
+                    <div className="cd-val">Max 10</div>
                   </div>
                 </div>
-                <div class="card-footer">
+                <div className="card-footer">
                   <div>
-                    <div class="card-price-from">From</div>
-                    <div class="card-price">$190</div>
-                    <div class="card-price-pp">per person</div>
+                    <div className="card-price-from">From</div>
+                    <div className="card-price">$190</div>
+                    <div className="card-price-pp">per person</div>
                   </div>
-                  <button class="btn-sm">Details</button>
+                  <button className="btn-sm">Details</button>
                 </div>
               </div>
             </div>
 
             {/* <!-- Card 3: Hwange --> */}
             <div
-              class="trip-card reveal reveal-delay-1"
+              className="trip-card reveal reveal-delay-1"
               data-category="safari luxury"
               onclick="openModal('hw')"
             >
-              <div class="card-img">
+              <div className="card-img">
                 <svg
                   viewBox="0 0 380 220"
                   xmlns="http://www.w3.org/2000/svg"
@@ -473,51 +686,51 @@ function PackagesPage() {
                     fill="#0D0A05"
                   />
                 </svg>
-                <div class="card-tag">Safari · Luxury</div>
+                <div className="card-tag">Safari · Luxury</div>
               </div>
-              <div class="card-body">
-                <div class="card-name">
+              <div className="card-body">
+                <div className="card-name">
                   Hwange Safari
                   <br />
                   Lodge Experience
                 </div>
-                <div class="card-desc">
+                <div className="card-desc">
                   Zimbabwe's largest national park at its finest. Night drives,
                   waterhole photography hides, and the famed 40,000-strong
                   elephant population under expert ranger care.
                 </div>
-                <div class="card-details">
-                  <div class="card-detail">
-                    <div class="cd-label">Days</div>
-                    <div class="cd-val">7 days</div>
+                <div className="card-details">
+                  <div className="card-detail">
+                    <div className="cd-label">Days</div>
+                    <div className="cd-val">7 days</div>
                   </div>
-                  <div class="card-detail">
-                    <div class="cd-label">Departs</div>
-                    <div class="cd-val">Aug 4</div>
+                  <div className="card-detail">
+                    <div className="cd-label">Departs</div>
+                    <div className="cd-val">Aug 4</div>
                   </div>
-                  <div class="card-detail">
-                    <div class="cd-label">Guests</div>
-                    <div class="cd-val">Max 8</div>
+                  <div className="card-detail">
+                    <div className="cd-label">Guests</div>
+                    <div className="cd-val">Max 8</div>
                   </div>
                 </div>
-                <div class="card-footer">
+                <div className="card-footer">
                   <div>
-                    <div class="card-price-from">From</div>
-                    <div class="card-price">$210</div>
-                    <div class="card-price-pp">per person</div>
+                    <div className="card-price-from">From</div>
+                    <div className="card-price">$210</div>
+                    <div className="card-price-pp">per person</div>
                   </div>
-                  <button class="btn-sm">Details</button>
+                  <button className="btn-sm">Details</button>
                 </div>
               </div>
             </div>
 
             {/* <!-- Card 4: Mana Pools --> */}
             <div
-              class="trip-card reveal reveal-delay-2"
+              className="trip-card reveal reveal-delay-2"
               data-category="adventure safari"
               onclick="openModal('mp')"
             >
-              <div class="card-img">
+              <div className="card-img">
                 <svg
                   viewBox="0 0 380 220"
                   xmlns="http://www.w3.org/2000/svg"
@@ -656,51 +869,51 @@ function PackagesPage() {
                   />
                   <ellipse cx="350" cy="90" rx="28" ry="12" fill="#0D0A05" />
                 </svg>
-                <div class="card-tag">Adventure</div>
+                <div className="card-tag">Adventure</div>
               </div>
-              <div class="card-body">
-                <div class="card-name">
+              <div className="card-body">
+                <div className="card-name">
                   Mana Pools
                   <br />
                   Canoe Expedition
                 </div>
-                <div class="card-desc">
+                <div className="card-desc">
                   Paddle the Zambezi with hippos, crocodiles, and elephants as
                   your companions. Wild camping on sandbanks and a UNESCO World
                   Heritage floodplain unlike anywhere on earth.
                 </div>
-                <div class="card-details">
-                  <div class="card-detail">
-                    <div class="cd-label">Days</div>
-                    <div class="cd-val">6 days</div>
+                <div className="card-details">
+                  <div className="card-detail">
+                    <div className="cd-label">Days</div>
+                    <div className="cd-val">6 days</div>
                   </div>
-                  <div class="card-detail">
-                    <div class="cd-label">Departs</div>
-                    <div class="cd-val">Aug 18</div>
+                  <div className="card-detail">
+                    <div className="cd-label">Departs</div>
+                    <div className="cd-val">Aug 18</div>
                   </div>
-                  <div class="card-detail">
-                    <div class="cd-label">Guests</div>
-                    <div class="cd-val">Max 8</div>
+                  <div className="card-detail">
+                    <div className="cd-label">Guests</div>
+                    <div className="cd-val">Max 8</div>
                   </div>
                 </div>
-                <div class="card-footer">
+                <div className="card-footer">
                   <div>
-                    <div class="card-price-from">From</div>
-                    <div class="card-price">$4,400</div>
-                    <div class="card-price-pp">per person</div>
+                    <div className="card-price-from">From</div>
+                    <div className="card-price">$4,400</div>
+                    <div className="card-price-pp">per person</div>
                   </div>
-                  <button class="btn-sm">Details</button>
+                  <button className="btn-sm">Details</button>
                 </div>
               </div>
             </div>
 
             {/* <!-- Card 5: Eastern Highlands --> */}
             <div
-              class="trip-card reveal"
+              className="trip-card reveal"
               data-category="adventure cultural"
               onclick="openModal('eh')"
             >
-              <div class="card-img">
+              <div className="card-img">
                 <svg
                   viewBox="0 0 380 220"
                   xmlns="http://www.w3.org/2000/svg"
@@ -794,50 +1007,50 @@ function PackagesPage() {
                     fill="none"
                   />
                 </svg>
-                <div class="card-tag">Highlands</div>
+                <div className="card-tag">Highlands</div>
               </div>
-              <div class="card-body">
-                <div class="card-name">
+              <div className="card-body">
+                <div className="card-name">
                   Eastern Highlands
                   <br />
                   Scenic Journey
                 </div>
-                <div class="card-desc">
+                <div className="card-desc">
                   Tea plantations, mountain trout fishing, Nyanga's Mtarazi
                   Falls, and cool highland air. A lush green escape through
                   Zimbabwe's most scenic mountain terrain.
                 </div>
-                <div class="card-details">
-                  <div class="card-detail">
-                    <div class="cd-label">Days</div>
-                    <div class="cd-val">5 days</div>
+                <div className="card-details">
+                  <div className="card-detail">
+                    <div className="cd-label">Days</div>
+                    <div className="cd-val">5 days</div>
                   </div>
-                  <div class="card-detail">
-                    <div class="cd-label">Departs</div>
-                    <div class="cd-val">Sep 2</div>
+                  <div className="card-detail">
+                    <div className="cd-label">Departs</div>
+                    <div className="cd-val">Sep 2</div>
                   </div>
-                  <div class="card-detail">
-                    <div class="cd-label">Guests</div>
-                    <div class="cd-val">Max 10</div>
+                  <div className="card-detail">
+                    <div className="cd-label">Guests</div>
+                    <div className="cd-val">Max 10</div>
                   </div>
                 </div>
-                <div class="card-footer">
+                <div className="card-footer">
                   <div>
-                    <div class="card-price-from">From</div>
-                    <div class="card-price">$2,800</div>
-                    <div class="card-price-pp">per person</div>
+                    <div className="card-price-from">From</div>
+                    <div className="card-price">$2,800</div>
+                    <div className="card-price-pp">per person</div>
                   </div>
-                  <button class="btn-sm">Details</button>
+                  <button className="btn-sm">Details</button>
                 </div>
               </div>
             </div>
 
             <div
-              class="trip-card reveal reveal-delay-1"
+              className="trip-card reveal reveal-delay-1"
               data-category="safari adventure luxury"
               onclick="openModal('gn')"
             >
-              <div class="card-img">
+              <div className="card-img">
                 <svg
                   viewBox="0 0 380 220"
                   xmlns="http://www.w3.org/2000/svg"
@@ -960,50 +1173,50 @@ function PackagesPage() {
                     opacity="0.15"
                   />
                 </svg>
-                <div class="card-tag">Wilderness · Luxury</div>
+                <div className="card-tag">Wilderness · Luxury</div>
               </div>
-              <div class="card-body">
-                <div class="card-name">
+              <div className="card-body">
+                <div className="card-name">
                   Gonarezhou
                   <br />
                   Wilderness Expedition
                 </div>
-                <div class="card-desc">
+                <div className="card-desc">
                   The Place of Many Elephants. Ancient baobabs, the dramatic
                   Chilojo Cliffs, walking safaris with expert trackers, and an
                   exclusive mobile camp in unspoiled wilderness.
                 </div>
-                <div class="card-details">
-                  <div class="card-detail">
-                    <div class="cd-label">Days</div>
-                    <div class="cd-val">8 days</div>
+                <div className="card-details">
+                  <div className="card-detail">
+                    <div className="cd-label">Days</div>
+                    <div className="cd-val">8 days</div>
                   </div>
-                  <div class="card-detail">
-                    <div class="cd-label">Departs</div>
-                    <div class="cd-val">Sep 15</div>
+                  <div className="card-detail">
+                    <div className="cd-label">Departs</div>
+                    <div className="cd-val">Sep 15</div>
                   </div>
-                  <div class="card-detail">
-                    <div class="cd-label">Guests</div>
-                    <div class="cd-val">Max 6</div>
+                  <div className="card-detail">
+                    <div className="cd-label">Guests</div>
+                    <div className="cd-val">Max 6</div>
                   </div>
                 </div>
-                <div class="card-footer">
+                <div className="card-footer">
                   <div>
-                    <div class="card-price-from">From</div>
-                    <div class="card-price">$6,500</div>
-                    <div class="card-price-pp">per person</div>
+                    <div className="card-price-from">From</div>
+                    <div className="card-price">$6,500</div>
+                    <div className="card-price-pp">per person</div>
                   </div>
-                  <button class="btn-sm">Details</button>
+                  <button className="btn-sm">Details</button>
                 </div>
               </div>
             </div>
 
             <div
-              class="trip-card reveal reveal-delay-2"
+              className="trip-card reveal reveal-delay-2"
               data-category="cultural"
               onclick="openModal('bw')"
             >
-              <div class="card-img">
+              <div className="card-img">
                 <svg
                   viewBox="0 0 380 220"
                   xmlns="http://www.w3.org/2000/svg"
@@ -1142,40 +1355,40 @@ function PackagesPage() {
                     opacity="0.4"
                   />
                 </svg>
-                <div class="card-tag">Cultural</div>
+                <div className="card-tag">Cultural</div>
               </div>
-              <div class="card-body">
-                <div class="card-name">
+              <div className="card-body">
+                <div className="card-name">
                   Bulawayo &amp;
                   <br />
                   Matobo Retreat
                 </div>
-                <div class="card-desc">
+                <div className="card-desc">
                   Zimbabwe's City of Kings meets its most mystical landscape.
                   Ndebele cultural immersion, Cecil Rhodes's grave, ancient San
                   Bushman rock paintings, and rhino tracking on foot.
                 </div>
-                <div class="card-details">
-                  <div class="card-detail">
-                    <div class="cd-label">Days</div>
-                    <div class="cd-val">4 days</div>
+                <div className="card-details">
+                  <div className="card-detail">
+                    <div className="cd-label">Days</div>
+                    <div className="cd-val">4 days</div>
                   </div>
-                  <div class="card-detail">
-                    <div class="cd-label">Departs</div>
-                    <div class="cd-val">Sep 28</div>
+                  <div className="card-detail">
+                    <div className="cd-label">Departs</div>
+                    <div className="cd-val">Sep 28</div>
                   </div>
-                  <div class="card-detail">
-                    <div class="cd-label">Guests</div>
-                    <div class="cd-val">Max 10</div>
+                  <div className="card-detail">
+                    <div className="cd-label">Guests</div>
+                    <div className="cd-val">Max 10</div>
                   </div>
                 </div>
-                <div class="card-footer">
+                <div className="card-footer">
                   <div>
-                    <div class="card-price-from">From</div>
-                    <div class="card-price">$1,950</div>
-                    <div class="card-price-pp">per person</div>
+                    <div className="card-price-from">From</div>
+                    <div className="card-price">$1,950</div>
+                    <div className="card-price-pp">per person</div>
                   </div>
-                  <button class="btn-sm">Details</button>
+                  <button className="btn-sm">Details</button>
                 </div>
               </div>
             </div>

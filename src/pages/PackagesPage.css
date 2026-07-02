@@ -117,7 +117,7 @@
     font-size: 10px;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--gold);
+    color: gray;
     margin-bottom: 20px;
 }
 
@@ -128,7 +128,7 @@
 }
 
 .trip-name {
-    font-family: var(--serif);
+    font-family: serif;
     font-size: 38px;
     font-weight: 300;
     line-height: 1.15;
@@ -138,13 +138,13 @@
 
 .trip-name em {
     font-style: italic;
-    color: var(--gold-pale);
+    color: #013716;
 }
 
 .trip-desc {
     font-size: 14px;
     line-height: 1.75;
-    color: var(--mist);
+    color: gray;
     margin-top: 16px;
     max-width: 340px;
 }
@@ -164,13 +164,13 @@
     font-size: 10px;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--gold-dim);
+    color: #000;
     margin-bottom: 6px;
 }
 
 .meta-value {
     font-size: 15px;
-    color: var(--cream);
+    color: gray;
     font-weight: 400;
 }
 
@@ -189,10 +189,10 @@
 }
 
 .price-block .amount {
-    font-family: var(--serif);
+    font-family: serif;
     font-size: 44px;
     font-weight: 300;
-    color: var(--gold);
+    color: gray;
     line-height: 1;
 }
 
@@ -202,11 +202,11 @@
 }
 
 .btn-book {
-    background: transparent;
-    border: 1px solid var(--gold);
-    color: var(--gold);
+    background: rgb(1, 46, 1);
+    border: 1px solid yellow;
+    color: yellow;
     padding: 14px 32px;
-    font-family: var(--sans);
+    font-family: sans-serif;
     font-size: 12px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -218,8 +218,9 @@
 }
 
 .btn-book:hover {
-    background: var(--gold);
+    background: transparent;
     color: var(--ink);
+    border-color: #013716;
 }
 
 /* Trip cards grid */
@@ -243,7 +244,7 @@
 }
 
 .trip-card:hover {
-    border-color: yellow;
+    border-color: green;
     transform: translateY(-6px);
 }
 
@@ -287,7 +288,7 @@
 }
 
 .card-name {
-    font-family: var(--serif);
+    font-family: serif;
     font-size: 24px;
     font-weight: 300;
     color: grey;
@@ -322,7 +323,7 @@
 
 .cd-val {
     font-size: 13px;
-    color: var(--cream-2);
+    color: grey;
     margin-top: 3px;
 }
 
@@ -343,7 +344,7 @@
 }
 
 .card-price {
-    font-family: var(--serif);
+    font-family: serif;
     font-size: 30px;
     font-weight: 300;
     color: grey;
@@ -359,7 +360,7 @@
     background: transparent;
     border: 1px solid #013716;
     color: #000;
-    font-family: var(--sans);
+    font-family: sans-serif;
     font-size: 11px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -412,7 +413,33 @@
 }
 
 .filter-btn.active {
-    background: rgb(245, 245, 9);
-    color: rgb(1, 36, 1);
+    background: rgb(196, 194, 194);
+    color: #013716;
     font-weight: 500;
 }
+
+
+/* .reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-delay-1 {
+    transition-delay: 0.1s;
+}
+
+.reveal-delay-2 {
+    transition-delay: 0.2s;
+}
+
+.reveal-delay-3 {
+    transition-delay: 0.3s;
+} */
