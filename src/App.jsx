@@ -4,6 +4,7 @@ import Navbarr from "./Navbar.jsx";
 import Banner from "./Banner.jsx";
 import Destinations from "./Destinations.jsx";
 import Testimonials from "./Testimonials.jsx";
+import { Analytics } from "@vercel/analytics/next";
 // import Services from "./Services.jsx";
 import AboutUs from "./AboutUs.jsx";
 import Footer from "./Footer.jsx";
@@ -24,6 +25,7 @@ function App() {
       <Blog />
       <Footer />
       <FloatingWhatsApp />
+      <Analytics />
     </div>
   );
 }
