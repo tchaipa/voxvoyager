@@ -175,47 +175,47 @@ function PackagesPage() {
     },
   };
 
-  // function openModal(key) {
-  //   const t = trips[key];
-  //   if (!t) return;
-  //   document.getElementById("modal-cat").textContent = t.cat;
-  //   document.getElementById("modal-title").innerHTML = t.title.replace(
-  //     " &amp; ",
-  //     " & ",
-  //   );
-  //   document.getElementById("modal-desc").textContent = t.desc;
-  //   document.getElementById("modal-price").textContent = t.price;
-  //   document.getElementById("modal-grid").innerHTML = t.meta
-  //     .map(
-  //       (m) =>
-  //         `<div class="modal-meta"><div class="label">${m.l}</div><div class="val">${m.v}</div></div>`,
-  //     )
-  //     .join("");
-  //   document.getElementById("modal-itin").innerHTML = `
-  //     <h4>Journey Overview</h4>
-  //     ${t.itin.map((d, i) => `<div class="itin-day"><div class="itin-num">${i + 1}</div><div class="itin-text"><strong>Day ${i + 1}:</strong> ${d}</div></div>`).join("")}
-  //   `;
-  //   // Set modal banner colour based on trip
-  //   const colours = {
-  //     vf: "#2A5060",
-  //     gz: "#3D2008",
-  //     hw: "#1A2A10",
-  //     mp: "#1A3838",
-  //     eh: "#0A1828",
-  //     gn: "#4A1008",
-  //     bw: "#0A1820",
-  //   };
-  //   document.getElementById("modal-img").style.background =
-  //     colours[key] || "#1A1612";
-  //   document.getElementById("modal-overlay").classList.add("open");
-  //   document.body.style.overflow = "hidden";
-  // }
+  function openModal(key) {
+    const t = trips[key];
+    if (!t) return;
+    document.getElementById("modal-cat").textContent = t.cat;
+    document.getElementById("modal-title").innerHTML = t.title.replace(
+      " &amp; ",
+      " & ",
+    );
+    document.getElementById("modal-desc").textContent = t.desc;
+    document.getElementById("modal-price").textContent = t.price;
+    document.getElementById("modal-grid").innerHTML = t.meta
+      .map(
+        (m) =>
+          `<div class="modal-meta"><div class="label">${m.l}</div><div class="val">${m.v}</div></div>`,
+      )
+      .join("");
+    document.getElementById("modal-itin").innerHTML = `
+      <h4>Journey Overview</h4>
+      ${t.itin.map((d, i) => `<div class="itin-day"><div class="itin-num">${i + 1}</div><div class="itin-text"><strong>Day ${i + 1}:</strong> ${d}</div></div>`).join("")}
+    `;
+    // Set modal banner colour based on trip
+    const colours = {
+      vf: "#2A5060",
+      gz: "#3D2008",
+      hw: "#1A2A10",
+      mp: "#1A3838",
+      eh: "#0A1828",
+      gn: "#4A1008",
+      bw: "#0A1820",
+    };
+    document.getElementById("modal-img").style.background =
+      colours[key] || "#1A1612";
+    document.getElementById("modal-overlay").classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
 
   function closeModal(e, force) {
     if (!force && e && e.target !== document.getElementById("modal-overlay"))
       return;
     document.getElementById("modal-overlay").classList.remove("open");
-    // document.body.style.overflow = "";
+    // document.body.style.overflow = "open";
   }
 
   document.addEventListener("keydown", (e) => {
@@ -246,31 +246,31 @@ function PackagesPage() {
           <div className="filters reveal reveal-delay-1">
             <button
               className="filter-btn active"
-              onclick="filterTrips('all', this)"
+              onClick={(e) => filterTrips("all", e.currentTarget)}
             >
               All Journeys
             </button>
             <button
               className="filter-btn"
-              onClick="filterTrips('safari', this)"
+              onClick={(e) => filterTrips("safari", e.currentTarget)}
             >
               Safari
             </button>
             <button
               className="filter-btn"
-              onclick="filterTrips('cultural', this)"
+              onClick={(e) => filterTrips("cultural", e.currentTarget)}
             >
               Cultural
             </button>
             <button
               className="filter-btn"
-              onclick="filterTrips('adventure', this)"
+              onClick={(e) => filterTrips("adventure", e.currentTarget)}
             >
               Adventure
             </button>
             <button
               className="filter-btn"
-              onclick="filterTrips('luxury', this)"
+              onClick={(e) => filterTrips("luxury", e.currentTarget)}
             >
               Ultra Luxury
             </button>
@@ -281,7 +281,7 @@ function PackagesPage() {
           <div
             className="featured-card reveal"
             data-category="luxury adventure"
-            onclick="openModal('vf')"
+            onClick={(e) => openModal("vf", e.currentTarget)}
           >
             <div className="trip-img">
               <img
@@ -296,20 +296,7 @@ function PackagesPage() {
                 <div className="trip-badge">
                   <span className="trip-badge-dot"></span>
                   Ultra Luxury · Adventure
-                  <span
-                  //     style="
-                  //   margin-left: auto;
-                  //   background: rgba(201, 168, 76, 0.15);
-                  //   border: 1px solid rgba(201, 168, 76, 0.3);
-                  //   padding: 3px 10px;
-                  //   border-radius: 2px;
-                  //   font-size: 10px;
-                  //   color: var(--gold);
-                  //   letter-spacing: 0.15em;
-                  // "
-                  >
-                    Featured
-                  </span>
+                  <span className="trip-span">Featured</span>
                 </div>
                 <h3 className="trip-name">
                   Victoria Falls
@@ -354,7 +341,7 @@ function PackagesPage() {
             <div
               className="trip-card reveal"
               data-category="cultural"
-              onclick="openModal('gz')"
+              onClick={(e) => openModal("gz", e.currentTarget)}
             >
               <div className="card-img">
                 <svg

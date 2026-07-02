@@ -9,7 +9,7 @@ import AboutUs from "./AboutUs.jsx";
 import Footer from "./Footer.jsx";
 import Blog from "./Blog.jsx";
 import ExperienceBand from "./ExperienceBand.jsx";
-// import { FloatingWhatsApp } from "react-floating-whatsapp";
+import { FloatingWhatsApp } from "react-floating-whatsapp";
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
       <Testimonials />
       <Blog />
       <Footer />
-      {/* <FloatingWhatsApp /> */}
+      <FloatingWhatsApp />
     </div>
   );
 }

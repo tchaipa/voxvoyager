@@ -418,6 +418,17 @@
     font-weight: 500;
 }
 
+.trip-span {
+    margin-left: auto;
+    background: rgba(201, 168, 76, 0.15);
+    border: 1px solid rgba(201, 168, 76, 0.3);
+    padding: 3px 10px;
+    border-radius: 2px;
+    font-size: 10px;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+}
+
 
 /* .reveal {
     opacity: 0;

@@ -11,7 +11,7 @@ function Destinations() {
       <h2>Destinations</h2>
       <span>Check out our latest calendar for the year 2026.</span>
       <MagicBento />
-      <a href="destinations" className="destination-link">
+      <a href="packages" className="destination-link">
         Explore More Destinations <FaArrowRight />
       </a>
     </div>
