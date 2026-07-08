@@ -82,6 +82,10 @@
     color: black;
 }
 
+.testimonials-h2 {
+    color: #fff !important;
+}
+
 .test-button {
     display: flex;
     justify-content: center;
